@@ -34,9 +34,7 @@ div>p:first-child {
     display: inline;
 }
 
-div img {
-    background: ;
-}
+
 
 .botao-amarelo {
     background-color: #ffaf43;
@@ -153,8 +151,20 @@ td button {
 
 #back-button:hover {
     background-color: #635a3d
+    
 }
 
+
+.button-comprar:hover {
+
+    background-color: rgb(231, 204, 86);
+    
+}
+
+.button-comprar:active {
+
+    color: white;
+}
 a {
 
     text-decoration: none;
