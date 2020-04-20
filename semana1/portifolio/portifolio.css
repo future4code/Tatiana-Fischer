@@ -1,0 +1,499 @@
+/* 
+    
+    
+
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    
+
+    }
+
+    /*páginia sobre mim*/
+
+    .sobremim {
+
+        background-image: url(plantaesquerda.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0vw;
+        padding: 0vw;
+    }
+   
+   
+   
+    #menu ul {
+        padding:0vw;
+        margin:0vw;
+       
+        list-style:none;
+        float: right;
+        
+        
+        
+     
+    }
+
+    #menu ul li { display: inline;
+       
+        
+    }
+
+    #menu ul li a {
+        padding: 1vw 3vw;
+             
+        color: gray;
+        text-decoration: none;
+        font-size: 1.5vw; 
+        font-family: monospace;
+       
+        
+       
+        
+       
+        
+    }
+
+
+    .logo {
+        
+        color: grey;
+        text-align: left;
+        font-size: 1.2vw;
+        font-family: 'Courier New', Courier, monospace;
+      
+        
+       
+        
+
+    }
+    .listaverde {
+    
+        background-color: rgb(229,250,228,0.8);
+        padding: 3vw;
+      
+      
+    }
+
+  
+
+    .títuloprincipal {
+        text-align: center;
+        display: block;
+        background-color: rgb(229,250,228,0.8);
+        padding: 10vw 3vw 1vw 3vw;
+        font-size: 3vw;
+        font-family: monospace;
+        color: rgb(110, 110, 110);
+    }
+
+    .títulosobre {
+        text-align: center;
+        
+        background-color: rgb(229,250,228,0.8);
+        font-family: monospace;
+        padding-bottom: 8vw;
+        color: grey;
+        font-style: italic;
+
+
+    }
+
+
+    .corposobre {
+        background-color:rgba(255, 255, 255, 0.966);
+        color: rgb(110, 110, 110);
+        font-size: 1.3vw;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+       
+        padding: 5vw 28vw 8vw 28vw;
+        display: inline-block;
+      
+     
+    }
+
+    .títulotextos {
+
+        text-decoration: underline;
+        color: rgb(110, 110, 110);
+        font-family: 'Courier New', Courier, monospace;
+        
+        display: block;
+        text-align: center;
+        padding: 3vw;
+        font-size: 1.3vw;
+        
+    }
+
+       
+        
+    .curriculo {  
+  
+        
+        color: rgb(110, 110, 110);
+        font-size: 1.3vw;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        display: block;
+        padding: 5vw 28vw;
+        background-color:rgb(229,250,228,0.8)
+      
+        }
+
+
+
+        .habilidades {
+
+            background-color: rgba(255, 255, 255, 0.938);
+            text-align: auto;
+            color: rgb(110, 110, 110);
+            font-family: 'Courier New', Courier, monospace;
+            padding: 5vw 35vw;
+            font-size: 1.3vw;
+           
+        }
+
+    
+        .hab {
+            padding: 1vw;
+          
+
+
+        }
+
+
+        .rodapé {
+
+            background-color: rgb(229,250,228,0.8);
+            
+         
+        }
+
+
+      /*  img {
+           
+          
+           ;
+            
+           
+            
+           margin: auto;
+            
+            opacity: 0.6;
+            
+            padding-top: 1vw;
+                       
+            
+
+            
+        } */
+   
+
+  .linksrodapé {
+      display: block;
+      text-align: center;
+      margin: auto;
+      color: rgb(110, 110, 110);
+      font-size: 1.2vw;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align: center;
+      text-decoration: none;
+      padding-bottom: 1vw;
+      padding-top: 4vw;
+     
+      
+  }
+
+  .link {
+ text-decoration: none;
+ color: rgb(110, 110, 110);
+ font-family: monospace;
+
+  }
+
+
+  .atébreve {
+
+    text-align: right;
+  }
+
+
+
+  /*página portifólio*/
+
+.páginaportifólio {
+
+    background-image: url(costela.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0vw;
+    padding: 0vw;
+}
+
+
+
+  
+.corpoportifolio { 
+
+    background-color: rgb(255,255,255,0.95);
+    
+ padding: 8vw;
+ 
+   
+    
+  
+  
+}
+
+.linkportifólio1 {
+    margin-left: 15vw;
+   
+display: inline-block;
+
+  
+}
+
+.linkportifólio {
+    
+   
+display: inline-block;
+  
+}
+.linkportifólio1:hover { 
+    margin: none;
+
+ outline: yellowgreen;
+ outline-style: solid;
+ padding: 2vw;
+ 
+ 
+
+}
+.linkportifólio:hover {
+
+    margin: none;
+
+    outline: yellowgreen;
+    outline-style: solid;
+    padding: 2vw;
+ 
+}
+
+.linkmenu:hover {
+
+    background-color: rgba(125, 156, 123, 0.5);
+   
+   
+    border-radius: 1vw;
+    
+}
+
+ 
+
+
+
+
+
+/*página contato*/
+
+.bodycontato {
+    background-image: url(planta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -30vw;
+    padding: 0vw;
+
+}
+
+
+.corpocontato {
+
+    background-color: rgb(255,255,255,0.8);
+    padding-top: 8vw;
+    display: block;
+}
+
+
+#formcontato {
+
+    text-align: center;
+    
+}
+
+label {
+
+    color: rgb(110, 110, 110);
+    font-family: monospace;
+    font-size: 1.2vw;
+}
+
+#nome {
+
+    padding: 0.5vw;
+    width: 20vw;
+
+}
+
+#email {
+
+    padding: 0.5vw;
+    width: 20vw;
+    margin-top: 1vw;
+
+}
+
+textarea {
+    
+    
+   margin-top: 1vw;
+  height: 15vw;
+  width: 23vw;
+ 
+   
+}
+
+button {
+    background-color: rgb(229,250,228);
+    border-radius: 1vw;
+    padding: 1.5vw;
+    border: solid rgb(110, 110, 110,0.5);
+    color: rgb(110, 110, 110);
+    font-family: monospace;
+    margin-top: 1vw;
+    margin-bottom: 4vw;
+}
+
+button:hover {
+    background-color: rgb(229,250,228,0.5);
+    border: solid rgb(110, 110, 110,0.3);
+
+}
+
+
+
+
+/*projeto seletivo future4*/
+
+.corpoprocessoseletivo {
+
+background-image: url(costela.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 0vw;
+padding: 0vw;
+}
+
+.tableprojetos {
+    
+    display: block; 
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+
+    margin: auto;
+    padding: 8vw 20vw;
+}
+.título-descrição {
+
+   
+   font-size: 2vw; 
+   padding: 0; 
+   display: inline;
+   color: rgb(110, 110, 110); 
+   font-family: monospace; 
+} 
+
+.textop1 {
+
+    font-size: 1.3vw;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(110, 110, 110);
+    padding-top: 1vw;
+   
+}
+
+.textop2 {
+    font-size: 1.3vw;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(110, 110, 110);
+    padding-top: 0.1vw;
+    padding-bottom: 2vw
+
+}
+
+.título-tecnologia {
+  
+    font-size: 1.2vw; 
+   
+    display: inline;
+    color: rgb(110, 110, 110); 
+    font-family: monospace; 
+    font-style: italic;
+    padding-bottom: 2vw
+ 
+    
+   
+}
+
+
+.htmlcss {
+    
+ list-style-type:none;
+
+ font-size: 1.1vw;
+ font-family: 'Courier New', Courier, monospace;
+ color: rgb(110, 110, 110);
+ padding-top: 0.5vw;
+ padding-bottom: 2vw;
+ }
+
+.imgp1 {
+
+   
+   margin: auto;
+   display: block;
+   width: 50vw;
+}
+
+.imgp2 {
+
+    margin: auto;
+    display: block;
+    
+    width: 25vw;
+}
+
+  
+   
+}
+
+.imagensps {
+
+    background-color: rgba(255, 255, 255, 0.5);
+  margin:auto;
+
+    
+}
+
+.título-img {
+
+   
+    padding-top: 2vw;
+    border-radius: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(121, 121, 121);
+    font-size: 1vw;
+    
+   
+   
+}
+
+.imgp3 {
+
+    margin: auto;
+    display: block;
+    
+    width: 45vw;
+}
