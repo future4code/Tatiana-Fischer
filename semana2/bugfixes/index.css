@@ -18,7 +18,13 @@ h2 {
 
 input {
     height: 20px;
-    width: 500px;
+    width: 300px;
+   border-bottom: 0.5px solid black;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   
+
 }
 
 button:focus {
