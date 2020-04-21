@@ -214,6 +214,10 @@ input:focus {
 }
 
 
+.div-voltar {
+
+    padding: 150px;
+}
 .button-comprar:hover {
 
     background-color: rgb(231, 204, 86);
