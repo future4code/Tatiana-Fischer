@@ -35,6 +35,8 @@ button:focus {
 img {
     width: 20px;
     height: 20px;
+    
+   
 }
 
 div>p:first-child {
@@ -129,24 +131,50 @@ table {
     
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+    font-size: 12px;
+    
+    
+    
     display: block;
     margin: auto;
+    padding: auto;
     
-    width: 300px;
+    width: 600px;
+    
    
 }
 
-td button {
+button {
     background-color: #fadf63;
     width: 150px;
     height: 30px;
     border-radius: 5px;
     color: black;
-    
+   
+   
+   
 
    
 }
+
+tr td {
+
+    
+    padding: 0vw 4vw 1vw 0;
+   
+  
+    margin:auto;
+    
+    width: 600px;
+    
+    
+    
+  
+  
+   
+
+}
+
 
 
 
@@ -174,7 +202,7 @@ input:focus {
     color: black;
     display: block;
     margin: auto;
-    
+
     
 }
 
