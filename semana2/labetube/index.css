@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*cabeçalho*/
+header {
+    display: flex;
+    
+    justify-content: space-around;
+   /*espaço entre itens*/
+    flex-direction: row;
+    flex-wrap: wrap; /*serão quebrados se necessário*/
+    align-content: center;
+    align-items: center;
+    line-height: 60px;
+    width: 100vw;
+
+    background-color: darkorange;
+}
+
+
+input { 
+   height: 20px;
+   position: relative;
+    
+    
+        
+}
+
+.title {
+    color: black;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+/*rodapé*/
+
+footer {
+
+    
+   background-color: dimgray;
+   color: white;
+    
+    text-align: center;
+    line-height: 80px;
+    
+    
+}
+/*corpo principal com os vídeos*/
+main {
+
+    display: flex;
+    
+    justify-content: space-around;
+   /*espaço entre itens*/
+    flex-direction: row;
+    flex-wrap: wrap; /*serão quebrados se necessário*/
+    align-content: center;
+    
+    line-height: 40vw;
+    
+    margin-top: 5vw;
+    margin-bottom: 20vw;
+}
+
+.item {
+    
+    width: 95vw;    
+    display: flex;
+    justify-content: space-around;
+   /*espaço entre itens*/
+    flex-direction: row;
+    flex-wrap: wrap; /*serão quebrados se necessário*/
+    align-content: center;
+    
+    
+
+}
+
+.videos {
+    display: flex;
+    
+    
+    width: 130px;
+    margin: 2vw;    
+    height: 30vh;
+    
+   
+}
+
+img {
+
+    width: 130px;
+      
+    height: 30vh;
+    
+}
+
+
+/*páginas vídeos clicados*/
+
+
+section {
+
+    display: flex;
+    
+    justify-content: space-around;
+   /*espaço entre itens*/
+    flex-direction: column;
+    flex-wrap: wrap; /*serão quebrados se necessário*/
+    align-content: center;
+    
+   height: 50vw;
+    
+    margin-top: 5vw;
+    
+    
+    
+}
+
+video {
+    display: flex;
+    height: 40vw;
+      
+    
+    
+
+}
+
+h2 {
+    display: inline;
+    
+    text-align: center;
+  
+    
+      
+}
