@@ -1,3 +1,5 @@
+
+
 //Exercício1-nterpretação de código:
 const bool1 = true
 const bool2 = false
@@ -19,7 +21,7 @@ console.log("e. ", typeof resultado) //e.  boolean
 
 /* Exercício2 -interpretação de código:
 a. "Arrays são maneiras de se guardar e acessar
-mais de uma informação ao mesmo tempo em uma mesma variavrl. 
+mais de uma informação ao mesmo tempo em uma mesma variavrl.
 Para acessar o valor: [i]
 let array = [i,i,i]
 array = [i]
@@ -27,9 +29,10 @@ array = [i]
 b. A primeira index de um array é array[0].
 
 c. Para se determinar o tamanho de uma array (número de elementos)
-se usa o comando  array.length. 
+se usa o comando  array.length.
 
 */
+
 //exercicio 2, d:
 let array
 console.log('I. ', array) //I.  undefined
@@ -56,36 +59,5 @@ i = array.length - 1
 array[i] = array[i-3]
 const resultadoC = array[i]%array[1]
 console.log('VII. ', resultadoC) //VII.  1
-
-
-/* Exercicio 2 - escrita de codigo*/
-
-const nome = prompt("1.Qual é seu nome?")
-const respostaNome ="Tatiana"
-console.log(nome)
-console.log("Resposta:", respostaNome)
-
-let idade = prompt("2.Qual a sua idade?")
-const respostaIdade ="28"
-console.log(idade)
-console.log("Resposta:", respostaIdade)
-
-
-const cidade = prompt("3.Qual cidade vocês nasceu?")
-const respostaCidade ="Uruguaiana"
-console.log(cidade)
-console.log("Resposta:", respostaCidade)
-
-let altura = prompt("4.Qual a sua altura?")
-const respostaAltura ="1.6"
-console.log(altura)
-console.log("Resposta:", respostaAltura)
-
-
-const signo = prompt("5.Qual é o seu signo?") 
-const respostaSigno ="Libra"
-console.log(signo)
-console.log("Resposta:", respostaSigno)
-
 
 
