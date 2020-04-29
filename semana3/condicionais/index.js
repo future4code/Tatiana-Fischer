@@ -1,7 +1,7 @@
 //Exercícios de interpretação de código
 
         //EXERCÍCIO 1
-
+/*
 const respostaDoUsuario = prompt("Digite o número que você quer testar?")
 const numero = Number(respostaDoUsuario)
 if(numero % 2 === 0) {
@@ -10,7 +10,7 @@ if(numero % 2 === 0) {
   console.log("Não passou no teste.")
 }
 
-
+*/
 /* --> RESPOSTAS: O comando realiza o teste a partir do resto da divisão do número por 2, 
 se o resto for igual a 0, é par, se não, o número é ímpar.
 Se o número for par recebe a mensangem que "Passou no teste". Se não for par, ou seja, é impar,
@@ -19,7 +19,7 @@ recebe a mensagem que "Não passou no teste" */
 
 
         //EXERCÍCIO 2
-
+/*
 let fruta = prompt("Escolha uma fruta")
 let preco
 switch (fruta) {
@@ -40,7 +40,7 @@ switch (fruta) {
     break;
 }
 console.log("O preço da fruta ", fruta, " é ", "R$ ", preco)
-
+*/
 
 /* --> RESPOSTAS: 
 
@@ -55,7 +55,7 @@ d."O preço da fruta  pêra  é  R$  5".
 
 
         //EXERCÍCIO 3
-
+/*
 const numero1 = prompt("Digite o primeiro número.")
 const numero2 = prompt("Digite o próximo número?")
 
@@ -69,7 +69,7 @@ if(numero1 > 0 && numero2 > 0) {
 
 }
 console.log(mensagem)
-
+*/
 
 /* --> RESPOSTAS: No console vai dar uma mensagem de erro: "Uncaught ReferenceError: mensagem is not defined..."
 Isso acontece porque o comenado que imprimi a mensagem no console está fora do escopo pai das condicionais,
@@ -79,7 +79,7 @@ ou seja, está fora das chaves {} do blocos das condicionais.*/
 //Exercícios de escrita de código:
 
         //EXERCÍCIO 4:
-
+/*
         let numero1 = prompt("Digite o primeiro número.")
         let numero2 = prompt("Digite o segundo número?")
         let numero3 = prompt("Digite o último número?")
@@ -116,7 +116,7 @@ ou seja, está fora das chaves {} do blocos das condicionais.*/
            else if(n1 === n2 && n2 === n3) {
             console.log("Digite pelo menos um número diferente")
            }
-
+*/
        
 
     
@@ -132,27 +132,68 @@ b. */
 
 
 //EXERCÍCIO 5:
+/* --> RESPOSTA:
+a. Link diagrama esquemático:
+https://drive.google.com/file/d/1F0b60O9gwyqnwnwuhHP1BiH_2HCbeyd8/view?usp=sharing
+*/
 
-let possuiOssos = prompt("O animal escolhido possui ossos?")
-let numero2 = prompt("O animal escolhido possui pelos?")
-let numero3 = prompt("Digite o último número?")
+//b.diagrama:
+let perguntaOssos = prompt("O animal escolhido possui ossos? sim ou não")
 
 
-let n1 = Number(numero1)
-let n2 = Number(numero2)
-let n3 = Number(numero3)
-if(n1 > n2 && n2 > n3) {
-    console.log(n1, n2, n3)
+    if (perguntaOssos === "não") {
+        console.log("É invertebrado")
     }
-
-           
-    else if (n1 > n3 && n3 > n2) {
-    console.log(n1, n3, n2)
-   }
-   else if(n2 > n1 && n1 > n3) {
-    console.log(n2, n1, n3)
     
-        
-      
-        
-      
+        else if (perguntaOssos === "sim") {
+          console.log("É vertebrado")
+          //pelos
+          let perguntaPelos = prompt("O animal escolhido possui pelos? sim ou não")
+                
+                if (perguntaPelos === "sim") {
+                  console.log("É mamífero") 
+                  let perguntaRacional = prompt("O animal escolhido é racional? sim ou não") 
+
+                  //racional
+                    if (perguntaRacional === "sim") {
+                        console.log("É humano") 
+                    }
+
+                    else if (perguntaRacional === "não") {
+                      console.log("É não humano") 
+                    }
+                  }//racional
+                
+                
+                else if (perguntaPelos === "não") {
+                  console.log("Não é mamífero") 
+                  let perguntaPenas = prompt("O animal escolhido tem penas? sim ou não")
+                  //penas
+                    if (perguntaPenas === "sim") {
+                      console.log("É uma ave") 
+                    }
+                    else if (perguntaPenas === "não") {
+                    let perguntaTerrestre = prompt("O animal escolhido é terrestre? sim ou não")
+                    
+                          //terrestre
+                            if (perguntaTerrestre === "não") {
+                                console.log("É um peixe") 
+                            }
+
+                            else if (perguntaTerrestre === "sim") {
+                            let perguntaAquatico = prompt("O animal escolhido passa um tempo no ambiente aquático? sim ou não")
+
+                                  //aquatico
+
+                                  if (perguntaAquatico === "sim") {
+                                    console.log("É um anfíbio") 
+                                    }
+                                  else if (perguntaAquatico === "não") {
+                                      console.log("É um réptil") 
+                                    }
+                                  }//aquatico
+                            
+
+                    }//terrestre
+          }//penas
+}//pelos
