@@ -27,6 +27,7 @@ Com variável numero = 4: [12]
 //EXERCÍCIO 3
 
 //a.
+/*
 let array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 let maxNumeroAtual = array[0]
 let minNumeroAtual = array[0]
@@ -35,21 +36,24 @@ for (let i = 0; i < array.length; i++) {
     if (array[i] > maxNumeroAtual) 
         maxNumeroAtual = array[i]
 }        
-    
 
 for (let i = 0; i < array.length; i++) {
 if (array[i] < minNumeroAtual) 
         minNumeroAtual = array[i]
-        
 }
  
-    
-    
-
-
 console.log("O maior número é " + maxNumeroAtual + " e o menor é "+ minNumeroAtual)
+*/
+//b.
 
-//c.
+let lista1 = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+let lista2 = []
+for(let numeros of lista1) {
+  lista2.push(numeros/10)
+
+}
+
+console.log(lista2)
 
 
 
