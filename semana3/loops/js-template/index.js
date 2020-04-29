@@ -27,7 +27,7 @@ Com variável numero = 4: [12]
 //EXERCÍCIO 3
 
 //a.
-/*
+
 let array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 let maxNumeroAtual = array[0]
 let minNumeroAtual = array[0]
@@ -43,7 +43,7 @@ if (array[i] < minNumeroAtual)
 }
  
 console.log("O maior número é " + maxNumeroAtual + " e o menor é "+ minNumeroAtual)
-*/
+
 //b.
 
 let lista1 = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
@@ -52,8 +52,40 @@ for(let numeros of lista1) {
   lista2.push(numeros/10)
 
 }
-
 console.log(lista2)
+
+
+//c.
+
+let lista1 = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+let lista2 = []
+for(let numeros of lista1) {
+    if (numeros % 2 === 0) {
+  lista2.push(numeros)
+    }
+}
+console.log(lista2)
+
+
+//d.
+
+let array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+
+
+
+    console.log(`O elemento do índex 0 é ${array[0]}`)
+    console.log(`O elemento do índex 1 é ${array[1]}`)
+    console.log(`O elemento do índex 2 é ${array[2]}`)
+    console.log(`O elemento do índex 3 é ${array[3]}`)
+    console.log(`O elemento do índex 4 é ${array[4]}`)
+    console.log(`O elemento do índex 5 é ${array[5]}`)
+    console.log(`O elemento do índex 6 é ${array[6]}`)
+    console.log(`O elemento do índex 7 é ${array[7]}`)
+    console.log(`O elemento do índex 8 é ${array[8]}`)
+    console.log(`O elemento do índex 9 é ${array[9]}`)
+    console.log(`O elemento do índex 10 é ${array[10]}`)
+    console.log(`O elemento do índex 11 é ${array[11]}`)
+
 
 
 
