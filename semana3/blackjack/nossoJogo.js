@@ -1,3 +1,5 @@
+/*
+
 // EXEMPLO DE UTILIZAÇÃO DA 'comprarCarta'
   
 console.log("Bem vindo ao jogo Blackjack!") 
@@ -36,7 +38,4 @@ console.log("Bem vindo ao jogo Blackjack!")
        // o que fazer se o usuário clicar "cancelar"
          console.log("O jogo acabou")
       }
-
-    
-
-  
+  */
