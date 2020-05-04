@@ -3,7 +3,7 @@
 /*
         const minhaFuncao = (quantidade) => {
             const array = []
-            for(let i = 0; i < 2; i+=2) {
+            for(let i = 0; i < quantidade; i+=2) {
                     for(let j = 0; j < i; j++) {
                         array.push(j)
                     }
@@ -12,15 +12,15 @@
 
         }
 
-        //console.log(minhaFuncao(2));
-        //console.log(minhaFuncao(5));
-        //console.log(minhaFuncao(8));
-*/
+        console.log(minhaFuncao(2));
+        console.log(minhaFuncao(5));
+        console.log(minhaFuncao(8));
+
     //RESPOSTAS:
      //a. O resultado será []
-     //b. O resultado será []
-     //c. O resultado será []
-
+     //b. O resultado será [0, 1, 0, 1, 2, 3]
+     //c. O resultado será [[0, 1, 0, 1, 2, 3, 0, 1, 2, 3, 4, 5]]
+*/
 
 //EXERCÍCIO 2
     /*    let arrayDeNomes = [5 , 6, 7, 8, 9, 10, 11];
