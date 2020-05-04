@@ -42,14 +42,15 @@
      //b. sim, funcionaria, pois as funções aceitam number e string, o que é importa é a posição do elemento.
 
 //EXERCÍCIO 3:
-/*function minhaFuncao(array) {
+/*
+    function providesNumbers(array) {
     let resultadoA = 0;
     let resultadoB = 1;
     let arrayFinal = [];
   
     for (let numero of array) {
-      resultadoA += numero;
-      resultadoB *= numero;
+      resultadoA += number;
+      resultadoB *= number;
     }
   
     arrayFinal.push(resultadoA);
@@ -57,11 +58,24 @@
     return arrayFinal;
   }
         
-  console.log(metodo([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
-
-  //Essa função é responsável por criar uma nova array, em que terão doi números,
-  //um deles é o resultadoA e o outro resultadoB. O resultadoA começa em zero
-  //e sempre somo com o número fornecido na array (um número de cada vez). 
-  //O resultaB começa no número 1, e sempre é multiplicado pelo número fornecido na array.
-  //Por exemplo, se o array iniciar por
+  console.log(providesNumbers([0]));
 */
+  //Essa função é responsável por criar uma nova array, em que terá dois valores,
+  //um deles é o resultadoA e o outro resultadoB. O resultadoA começa em zero
+  //e sempre soma com o número fornecido na array (um número de cada vez). 
+  //O resultaB começa no número 1, e sempre é multiplicado pelo número fornecido na array.
+  //Por exemplo, se o array iniciar por 0, o resultadoA será zero (0+0=0) e o resultadoB também (0*1=0).
+
+
+//Exercício de escrita de código
+//EXERCÍCIO 4:
+
+
+let changeAge = (menAge) => {
+ return menAge*7
+    
+
+}
+
+const result = changeAge(10)
+console.log(result)
