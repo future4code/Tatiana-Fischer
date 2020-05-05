@@ -69,13 +69,31 @@
 
 //Exercício de escrita de código
 //EXERCÍCIO 4:
+//A.
+        
+/*
+        let changeAge = (menAge) => {
+        return menAge*7            
+        }
 
+        const result = changeAge(10)
+        console.log(result)
+ */       
 
-let changeAge = (menAge) => {
- return menAge*7
+//B.  nome (string), a idade (number), o endereço (string) e um boolean que representa se é estudante ou não
+        
+        function criarPersonalidade (nome, idade, end, estudar) {
+
+            if(estudar === true) {
+                return console.log(`Eu sou ${nome}, tenho ${idade} anos, moro em ${end} e sou estudante`)
+            } else {
+                return console.log(`Eu sou ${nome}, tenho ${idade} anos, moro em ${end} e não sou estudante`)
+            }
+       }
+
+       let personalidade = criarPersonalidade('Fulano', 20, "Rua A", true)
+       
     
-
-}
-
-const result = changeAge(10)
-console.log(result)
+    
+        
+      
