@@ -1,0 +1,17 @@
+header {
+    border: 1px solid blue;
+}
+
+main {
+    border: 1px solid green;
+}
+
+
+div {
+    border: 1px solid red;
+}
+
+ul li {
+    background-color: yellow;
+}
+

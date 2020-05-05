@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="function.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Planner</title>
+</head>
+<body>
+    <header id="containerHeader">
+        <label>Escreva uma nova tarefa:</label>
+        <input type="text" name="novatarefa" id="novaTarefa">
+        <select name="dia" id="dia">
+            <option value="segunda">Segunda</option>
+            <option value="terca">Terça</option>
+            <option value="quarta">Quarta</option>
+            <option value="quinta">Quinta</option>
+            <option value="sexta">Sexta</option>
+            <option value="sabado">Sábado</option>
+            <option value="domingo">Domingo</option>
+         <select>
+        <button onclick="criarTarefa()" type="submit">Criar Tarefa</button>
+    </header>
+    <main>
+        <div id="segunda">
+            
+            <ul class="listaTarefas">Segunda</ul>
+        </div>
+        <div id="terça">
+            
+            <ul>Terça</ul>
+        </div>
+        <div id="quarta">
+            
+            <ul>Quarta</ul>
+        </div>
+        <div id="quinta">
+           
+            <ul>Quinta</ul>
+        </div>
+        <div id="sexta">
+            
+            <ul>Sexta</ul>
+        </div>
+        <div id="sabado">
+            
+            <ul>Sábado</ul>
+        </div>
+        <div id="domingo">
+            
+            <ul>Domingo</ul>
+        </div>
+                
+    </main>
+</body>
+</html>
