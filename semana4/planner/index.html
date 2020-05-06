@@ -9,9 +9,9 @@
 </head>
 <body>
     <header id="containerHeader">
-        <label>Escreva uma nova tarefa:</label>
+        <label>Nova tarefa:</label>
         <input type="text" name="novatarefa" id="novaTarefa">
-        <select name="dia" id="dia">
+        <select name="dia" id="selecionarDia">
             <option value="segunda">Segunda</option>
             <option value="terca">Terça</option>
             <option value="quarta">Quarta</option>
@@ -22,36 +22,42 @@
          <select>
         <button onclick="criarTarefa()" type="submit">Criar Tarefa</button>
     </header>
+    <hr>
     <main>
-        <div id="segunda">
-            
-            <ul class="listaTarefas">Segunda</ul>
-        </div>
-        <div id="terça">
-            
-            <ul>Terça</ul>
-        </div>
-        <div id="quarta">
-            
-            <ul>Quarta</ul>
-        </div>
-        <div id="quinta">
-           
-            <ul>Quinta</ul>
-        </div>
-        <div id="sexta">
-            
-            <ul>Sexta</ul>
-        </div>
-        <div id="sabado">
-            
-            <ul>Sábado</ul>
-        </div>
-        <div id="domingo">
-            
-            <ul>Domingo</ul>
-        </div>
+        
+            <div id="segunda">
                 
+                <ul class="listaTarefas">Segunda</ul>
+            </div>
+            <div id="terca">
+                
+                <ul class="listaTarefas">Terça</ul>
+            </div>
+            <div id="quarta">
+                
+                <ul class="listaTarefas">Quarta</ul>
+            </div>
+       
+        
+            <div id="quinta">
+            
+                <ul class="listaTarefas">Quinta</ul>
+            </div>
+            <div id="sexta">
+                
+                <ul class="listaTarefas">Sexta</ul>
+            </div>
+            <div id="sabado">
+                
+                <ul class="listaTarefas">Sábado</ul>
+            </div>
+        
+            
+            <div id="domingo">
+                
+                <ul class="listaTarefas">Domingo</ul>
+            </div>
+             
     </main>
 </body>
 </html>

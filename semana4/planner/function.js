@@ -1,20 +1,18 @@
-//let diasDaSemana = document.getElementsByClassName()
+function criarTarefa() {
+    const input = document.querySelector("input")
+    //forma de selecionar o que foi escrito no input
 
+    const novaTarefa = input.value
+    if (novaTarefa === "") {
+        alert("Digite uma tarefa")
+    }
 
-let tarefaNova //vai vir de dentro do input
-listaTarefas.innerHTML += <li>`${tarefaNova}`</li>
+    const diaEscolhido = document.querySelector("#selecionarDia")
+    const dia = diaEscolhido.value
 
-
-function adicionarTarefa() {
-    let tarefa = document.getElementById('inputNovaTarefa')
-    let diaEscolhido = document.getElementById('seletorDiaDaSemana')
-
-} criarTarefa
-
-//pegar valor do options
-
-//direcionar os valores do options para sua div específica
-
-//copiar texto do input
-
-//direcionar texto para a div correta
+    let todasTarefas = document.querySelector("#" + dia + " .listaTarefas")
+    todasTarefas.innerHTML += "<li>" + novaTarefa + "</li>"
+    
+//limpar:
+    input.value = ""
+}
