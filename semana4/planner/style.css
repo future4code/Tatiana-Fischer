@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/*cabeçalho*/
+header {
+    
+        display: flex;               
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        line-height: 70px;
+        width: 100vw;
+        background-color: whitesmoke;
+        text-align: center;
+}    
+input { 
+    height: 20px;
+    position: relative;
+    width: 20vw;
+}
+label {
+    position: relative;
+    padding-right: 20px;
+    font-size: large;
+}
+select {
+    position: relative;
+    padding-right: 20px;
+    font-size: medium;
+    margin-left: 20px;
+    margin-right: 20px;
+}    
+button {
+    position: relative;
+    padding-right: 20px;
+    font-size: medium;
+}    
+/*corpo principal:*/   
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 30px;  
+}
+div {
+    border-left: 1px dashed black;
+    height: 50vh;
+    width: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    text-align: left;
+    justify-content: space-around;
+}   
