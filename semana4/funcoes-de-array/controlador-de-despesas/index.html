@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+        <section id="cadastro">
+            <h3>Controlador de Despesas</h3>
+            <h4>Cadastro de despesa:</h4>
+            <label>Valor:</label>
+            <input type="number" id="inputValor">
+
+            <label>Tipo:</label>
+            <select id="selecionarTipo">
+                <option value="comida">Alimentação</option>
+                <option value="transporte">Transporte</option>
+                <option value="estudo">Estudo</option>
+            </select>
+
+            <label>Descrição:</label>
+            <input type="text" id="descricao">
+
+            <button id="buttonCadastro" onclick="cadastrarDespesa()"></button>
+        </section>
+
+        <section id="detalhes">
+            <h3>Despesas Detalhadas</h3>
+            <label>Tipo</label>
+            <select id="selecionarTipo">
+                <option value="comida">Alimentação</option>
+                <option value="transporte">Transporte</option>
+                <option value="estudo">Estudo</option>
+            </select>
+
+            <label>Valor Mínimo</label>
+            <input type="number" id="valorMinimo">
+
+            <label>Valor Máximo</label>
+            <input type="number" id="valorMáximo">
+
+            <button id="buttonFiltrar" onclick="filtrar()"></button>
+            <button id="buttonLimparFiltro" onclick="limpar()"></button>            
+        </section>
+
+        <section id="extrato">
+            <h3>Extrato</h3>
+            <h4>Valor Total:</h4>
+            <ul id="listaComida"></ul>
+
+            <ul id="listaTransporte"></ul>
+        </section>
+
+
+
+    </div>
+</body>
+</html>
