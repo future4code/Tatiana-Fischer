@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    
+}
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 132, 163, 0.753);
+    height: 80px;
+    align-items: center;
+    color: honeydew; 
+    width: 100vw;
+}
+
+form {
+    background-color: rgba(47, 0, 78, 0.658);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    flex-direction: column;
+    color: honeydew;
+    width: 100vw;
+}
+section {
+    background-color: rgba(224, 191, 206, 0.397);
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: initial;
+    width: 100vw;
+
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+#inputTitle {
+    height: 2vh;
+    width: 30vh;
+}
+
+#inputAutor {
+    height: 2vh;
+    width: 30vh;
+}
+
+#textarea {
+    height: 20vw;
+    width: 40vh;
+}
+
+#inputImg {
+    height: 3vh;
+    width: 110px;
+    
+}
+
+button {
+    height: 3vh;
+    width: 20vh;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+}
+
+label {
+    background-color: ;
+}
+
+img {
+    height: 30vh;
+    width: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+}
