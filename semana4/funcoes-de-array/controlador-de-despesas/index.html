@@ -13,26 +13,31 @@
         <section id="cadastro">
             <h3>Controlador de Despesas</h3>
             <h4>Cadastro de despesa:</h4>
-            <label>Valor:</label>
-            <input type="number" id="inputValor">
+            
+            <form id="formCadastro">
+                <label for="valor">Valor:</label>
+                <input type="number" name="" id="inputValor">
 
-            <label>Tipo:</label>
-            <select id="selecionarTipo">
-                <option value="comida">Alimentação</option>
-                <option value="transporte">Transporte</option>
-                <option value="estudo">Estudo</option>
-            </select>
+                <label for="tipoDespesa">Tipo:</label>
+                <select id="selecionarTipo">
+                    <option id="vazio" ></option>
+                    <option id="comida" >Alimentação</option>
+                    <option id="transporte" value="transporte">Transporte</option>
+                    <option id="estudo" value="estudo">Estudo</option>
+                </select>
 
-            <label>Descrição:</label>
-            <input type="text" id="descricao">
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="inputDescricao">
 
-            <button id="buttonCadastro" onclick="cadastrarDespesa()"></button>
+                <button id="buttonCadastro" onclick="cadastrarDespesa()">Cadastrar Despesa</button>
+            </form>
         </section>
 
         <section id="detalhes">
             <h3>Despesas Detalhadas</h3>
             <label>Tipo</label>
-            <select id="selecionarTipo">
+            <select id="selecionarTipo2">
+                <option id="vazio" ></option>
                 <option value="comida">Alimentação</option>
                 <option value="transporte">Transporte</option>
                 <option value="estudo">Estudo</option>
@@ -44,8 +49,10 @@
             <label>Valor Máximo</label>
             <input type="number" id="valorMáximo">
 
-            <button id="buttonFiltrar" onclick="filtrar()"></button>
-            <button id="buttonLimparFiltro" onclick="limpar()"></button>            
+            <button id="buttonFiltrar" onclick="filtrar()">Filtrar</button>
+            <button id="buttonLimparFiltro" onclick="limpar()">Limpar Filtro</button>
+            
+            <ul id="listaDespesas">Todas Despesas:</ul>
         </section>
 
         <section id="extrato">
@@ -56,8 +63,8 @@
             <ul id="listaTransporte"></ul>
         </section>
 
+</div>
 
-
-    </div>
+-->   
 </body>
 </html>
