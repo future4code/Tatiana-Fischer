@@ -68,3 +68,14 @@ números positivos são maiores que 0, são esses números que irão aparecer no
 console.log(numero2)
 */
 
+//Exercícios de Lógica de Programação:
+/*
+1.
+
+2.
+a)false
+b)true
+c)true
+d)false
+e)false
+
