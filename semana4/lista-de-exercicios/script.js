@@ -54,3 +54,17 @@ da array2. No final, vai aparecer no console a quantidade de números da
 array numero (14), a quantidade de numeros pares (6) e a quantidade de numeros ímpares (8)
 */
 
+/*
+4. Foi criada uma array denominada de numeros, com alguns numeros dentro da colchetes.
+Foram criadas duas variáveis, a variável numero 1 foi atribuido o valor infinito,
+essa variável é considerada maior que todas as outras. Para variável numero2
+foi atribuido o valor 0. Foi usado o for...it para pegar uma variável numero
+de dentro da array numeros. Se esse numero for menor que a variável numero1,
+ou seja, menor que infinito, ao numero1 será atribuido o valor do numero. Portanto,
+no console.log(numero1) vai aparecer todos os numeros da array numeros, já que todos
+os numeros são menores que infinito. Se o numero for maior que o numero2, ou seja,
+maior que 0, ao numero2 será atribuido o valor do numero, no exemplo, todos os
+números positivos são maiores que 0, são esses números que irão aparecer no
+console.log(numero2)
+*/
+
