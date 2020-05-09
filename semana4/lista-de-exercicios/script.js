@@ -96,3 +96,18 @@ Corrigiria pedindo para o usuário, atravé do prompt, indique um número (N):
     }
 }
 */
+/*
+4.
+ function tipoTriangulo (a,b,c) {
+     if(a === b && b === c) {
+         console.log(`O triângulo é EQUILÁTERO`)
+     } else if(a === b && b !== c || b === c && a !== c || a === c && c !== b) {
+         console.log(`O triângulo é ISÓCELES`)
+     } else {
+         console.log(`o triângulo é ESCALENO`)
+     }
+
+        
+}
+const resultado = tipoTriangulo(5,5,6) 
+*/
