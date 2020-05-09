@@ -44,3 +44,13 @@ escrita que "o tipo de investimento informado
 é incorreto".
 */
 /*
+3. No caso, foi criada uma array chamada de numeros em que
+forneceu alguns números dentro de []. Foram criada mais duas arrays
+vazias que serão preenchidas conforme o for..of usado.
+Por isso, o for...of está pegando uma variavel denominada numero
+de dentro da array numeros, se esse numero for par ele será empurrado
+para dentro da array1 e se não, se for ímpar, será empurrado para dentro
+da array2. No final, vai aparecer no console a quantidade de números da
+array numero (14), a quantidade de numeros pares (6) e a quantidade de numeros ímpares (8)
+*/
+
