@@ -78,4 +78,21 @@ b)true
 c)true
 d)false
 e)false
+*/
+/*
+3.
+Não, este código não funcionará, por que o i sempre será 0, fazendo com que a 
+multiplicação por 2 sempre dê como reposta zero. Pode-se usar, para simplificar 
+o laço, o "for", em que i inicia na posição 0, tem a condição de continuação
+i <= N, e o incremento de +1 (i++).
+Corrigiria pedindo para o usuário, atravé do prompt, indique um número (N):
 
+
+   let N = prompt("escolha um número")
+    for (let i=0 ; i <= N; i++) {
+        if(i % 2 === 0) {
+                      
+            console.log(i)
+    }
+}
+*/
