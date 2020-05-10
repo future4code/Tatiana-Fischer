@@ -111,3 +111,40 @@ Corrigiria pedindo para o usuário, atravé do prompt, indique um número (N):
 }
 const resultado = tipoTriangulo(5,5,6) 
 */
+/*5.*/
+
+function escolheMaiorNumero (numero1, numero2) {
+    if(numero1 > numero2) {
+        console.log(`O maior é: ${numero1}`)
+    } else if(numero2 > numero1) {
+        console.log(`O meior é: ${numero2}`)
+    } else {
+        console.log(`Os dois número são iguais: ${numero1} e ${numero2}`)
+    }
+}
+
+function dizerSeDivisivel (numero1, numero2){
+    if(numero1 % numero2 === 0) {
+        console.log(`${numero1} é divisível por ${numero2}`)
+    } else {
+        console.log(`${numero1} não é divisível por ${numero2}`)
+    }
+    if(numero2 % numero1 === 0) {
+        console.log(`${numero2} é divisível por ${numero1}`)
+    } else { 
+        console.log(`${numero2} não é divisível por ${numero1}`)
+    }
+}
+
+function subtrairNumeros (numero1, numero2){
+    if(numero1 >= numero2) {
+        let resultadoN1Maior = numero1 - numero2
+        console.log(`A diferença entre eles é ${resultadoN1Maior}`)
+    } else if (numero2 > numero1) {
+        let resultadoN2Maior = numero2 - numero1
+        console.log(`A diferença entre eles é ${resultadoN2Maior}`)
+    }
+}
+let resultado2 = escolheMaiorNumero(15,30)
+let resultado1 = dizerSeDivisivel(15,30)
+let resultado3 = subtrairNumeros(15,30)
