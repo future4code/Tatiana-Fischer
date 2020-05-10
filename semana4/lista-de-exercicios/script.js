@@ -111,13 +111,13 @@ Corrigiria pedindo para o usuário, atravé do prompt, indique um número (N):
 }
 const resultado = tipoTriangulo(5,5,6) 
 */
-/*5.*/
+/*5.
 
 function escolheMaiorNumero (numero1, numero2) {
     if(numero1 > numero2) {
         console.log(`O maior é: ${numero1}`)
     } else if(numero2 > numero1) {
-        console.log(`O meior é: ${numero2}`)
+        console.log(`O maior é: ${numero2}`)
     } else {
         console.log(`Os dois número são iguais: ${numero1} e ${numero2}`)
     }
@@ -148,3 +148,28 @@ function subtrairNumeros (numero1, numero2){
 let resultado2 = escolheMaiorNumero(15,30)
 let resultado1 = dizerSeDivisivel(15,30)
 let resultado3 = subtrairNumeros(15,30)
+*/
+//Exercícios de Funções:
+/*
+1 e 2.
+
+function escolherNumero() {
+    let array = [-1, 0, 1, 2, 3, 100]
+    array.sort(function(a,b){//sort: organiza por ordem crescente, mas em forma de string: 0,1,-1,100,2,3
+        return a-b //organiza para a ordem crescente numeral: -1,0,1,2,3,100
+    })
+    let segundoMaiorEMenor = array.length -2//
+    console.log(`O segundo menor é ${array[1]} e o segundo maior é ${array[segundoMaiorEMenor]}`)//o segundo menor estará
+   
+}//outra forma que pensei era fazer um novo array com o push ordenando em ordem crescente e pegando os numeros
+//conforme a posição. 
+
+
+let alertHello  = function() {
+ 
+   alert("Hello Future4") 
+    escolherNumero()
+}
+ 
+alertHello()
+*/
