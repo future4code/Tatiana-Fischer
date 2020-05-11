@@ -264,8 +264,22 @@ function criaRetangulo (lado1, lado2) {
     console.log(retangulos)}
     
     criaRetangulo(10, 15)
-    
-    */
+*/
+
+/* 3. */
+const filmeFavorito = {
+    titulo: "Náufrago",
+    ano: 2000,
+    diretor: 'Robert Zemeckis',
+    atores: ['Tom Hanks', 'Helen Hunt']
+
+}
+const titulo = filmeFavorito.titulo
+const ano = filmeFavorito.ano
+const diretor = filmeFavorito.diretor
+const atores = filmeFavorito.atores
+
+console.log(`Venha assistir ao filme ${titulo}, de ${ano}, dirigido por ${diretor} e estrelado por ${atores[0]} e ${atores[1]}.`)
 
 
 
