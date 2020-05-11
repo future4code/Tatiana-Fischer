@@ -303,8 +303,8 @@ console.log(anonimizarPessoa)
 */
 
 //Exercícios de Funções de array
-//1.
-/*
+//1-a:
+
 const pessoas = [
 	{ nome: "Pedro", idade: 20 },
 	{ nome: "João", idade: 10 },
@@ -319,7 +319,14 @@ const adultos = pessoas.filter((pessoa, index, array) => {
     return false
     
 })
-*/
+
+const adolescentes = pessoas.filter((pessoa, index, array) => {
+    if(pessoa.idade < 20) {
+        return true
+    }
+    return false
+})
+
 
 
 
