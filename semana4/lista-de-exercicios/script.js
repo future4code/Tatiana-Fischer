@@ -301,3 +301,27 @@ function anonimizarPessoa() {
 console.log(pessoa)
 console.log(anonimizarPessoa)
 */
+
+//Exercícios de Funções de array
+//1.
+/*
+const pessoas = [
+	{ nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]
+
+const adultos = pessoas.filter((pessoa, index, array) => {
+    if(pessoa.idade >= 20) {
+        return true
+    }
+    return false
+    
+})
+*/
+
+
+
+
+
