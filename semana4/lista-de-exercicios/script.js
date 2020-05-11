@@ -253,7 +253,19 @@ os quais são segmentados por diferentes valores. Por exemplo, quando
 queremos fazer uma lista de dados pessoais de clientes, em que
 sabemos o nome, email, data de nascimento.
 */
-
+/*2.
+function criaRetangulo (lado1, lado2) {
+    let retangulos = {
+        largura: lado1,
+        altura: lado2,
+        perimetro: 2*(lado1 + lado2),
+        area: lado1*lado2,
+    }
+    console.log(retangulos)}
+    
+    criaRetangulo(10, 15)
+    
+    */
 
 
 
