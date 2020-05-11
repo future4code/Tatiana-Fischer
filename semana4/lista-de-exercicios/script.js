@@ -68,57 +68,61 @@
         console.log(numero2)
 */
 
-//Exercícios de Lógica de Programação:
 
-//1. 
+
+//Exercícios de Lógica de Programação:
+//
+//
+//
 /*
-        3 exemplos de como percorrer uma lista (array) são por meio
-        do "for...of", do "for...each" e do "maps".
-        Exemplos:
-*/
-        //programa para classificar os numeros pares e impares:
-/*
-        let numeros = [57, 91, 200, 505, 890, 1050]
+1.
+Exemplos de como percorrer uma lista (array): "for...of", do "for...each" e do "maps".
+Programas:
+
+//programa para classificar os numeros pares e impares:
+
+    let numeros = [57, 91, 200, 505, 890, 1050]
 
         for(numero of numeros) {
             if(numero % 2 === 0) {
                 console.log(`O número ${numero} é par`)
             } else {
                 console.log(`O número ${numero} é impar`)
-            }
         }
-*/
-        //programa para igualar salários:
-/*
-        let funcionarios = [
-            {nome: 'julia', salario: 2000},
-            {nome: 'erenita', salario: 5000},
-            {nome: 'joão', salario: 4000}
-        ]
+    }    
+
+//programa para igualar salários:
+
+    let funcionarios = [
+        {nome: 'julia', salario: 2000},
+        {nome: 'erenita', salario: 5000},
+        {nome: 'joão', salario: 4000}
+    ]
 
         funcionarios.forEach((funcionario, index, array) => {
-            funcionario.salario = 2000
+        funcionario.salario = 2000
         })
 
-        console.log(funcionarios)
-*/
+    console.log(funcionarios)
 
-        //programa para saber todos os signos de uma lista de pessoas:
-/*
-        const alunas = [
-            {nome: 'jessica', signo: 'libra'},
-            {ome: 'mari', signo:'câncer'},
-            {nome: 'leticia', signo:'gêmeos'}
-        ]
 
-        const signosAlunas = alunas.map((signos, index, array) => {
-            return signos.signo
+//programa para saber todos os signos de uma lista de pessoas:
+
+    const alunas = [
+        {nome: 'jessica', signo: 'libra'},
+        {ome: 'mari', signo:'câncer'},
+        {nome: 'leticia', signo:'gêmeos'}
+    ]
+
+    const signosAlunas = alunas.map((signos, index, array) => {
+         return signos.signo
             
-        })
-        console.log(signosAlunas)
+    })
+    console.log(signosAlunas)
 */
+
+
 /*
-array
 2.
 a)false
 b)true
@@ -126,6 +130,8 @@ c)true
 d)false
 e)false
 */
+
+
 /*
 3.
 Não, este código não funcionará, por que o i sempre será 0, fazendo com que a 
@@ -143,6 +149,8 @@ Corrigiria pedindo para o usuário, atravé do prompt, indique um número (N):
     }
 }
 */
+
+
 /*
 4.
  function tipoTriangulo (a,b,c) {
@@ -152,13 +160,14 @@ Corrigiria pedindo para o usuário, atravé do prompt, indique um número (N):
          console.log(`O triângulo é ISÓCELES`)
      } else {
          console.log(`o triângulo é ESCALENO`)
-     }
-
-        
+     }  
 }
 const resultado = tipoTriangulo(5,5,6) 
 */
-/*5.
+
+
+/*
+//5.
 
 function escolheMaiorNumero (numero1, numero2) {
     if(numero1 > numero2) {
@@ -196,7 +205,13 @@ let resultado2 = escolheMaiorNumero(15,30)
 let resultado1 = dizerSeDivisivel(15,30)
 let resultado3 = subtrairNumeros(15,30)
 */
+
+
+//
+//
+//
 //Exercícios de Funções:
+
 /*
 1 e 2.
 
@@ -220,3 +235,25 @@ let alertHello  = function() {
  
 alertHello()
 */
+
+
+//Exercícios de Objetos:
+
+/*
+1. Arrays é um conjunto (lista) de valores para uma mesma variável,
+cada valor possui sua localização dentro do array,
+esse localização é feita através de numeração (index numérico), 
+iniciando por 0. Podemos utilizar o array, quando queremos
+agrupar diversos valores em sequências. Como por exemplo, uma lista de 
+numeros pares.
+
+Objeto é um conjunto de dados relacionados entre si, os quais
+recebem um índice de nomeação. O objeto é para dados mais complexos,
+os quais são segmentados por diferentes valores. Por exemplo, quando
+queremos fazer uma lista de dados pessoais de clientes, em que
+sabemos o nome, email, data de nascimento.
+*/
+
+
+
+
