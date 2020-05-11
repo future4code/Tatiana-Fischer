@@ -266,7 +266,7 @@ function criaRetangulo (lado1, lado2) {
     criaRetangulo(10, 15)
 */
 
-/* 3. */
+/* 3. 
 const filmeFavorito = {
     titulo: "Náufrago",
     ano: 2000,
@@ -280,6 +280,24 @@ const diretor = filmeFavorito.diretor
 const atores = filmeFavorito.atores
 
 console.log(`Venha assistir ao filme ${titulo}, de ${ano}, dirigido por ${diretor} e estrelado por ${atores[0]} e ${atores[1]}.`)
+*/
 
+//4.
+/*
+const pessoa = {
+    nome: 'Tati',
+    idade: '28',
+    email: 'tatiff@tatiff.com',
+    endereco: 'rua mirante'
+}
 
+function anonimizarPessoa() {
+    pessoa.nome = 'anônimo'
+    pessoa.idade = 'anônimo'
+    pessoa.email = 'anônimo'
+    pessoa.endereco = 'anônimo'
+}
 
+console.log(pessoa)
+console.log(anonimizarPessoa)
+*/
