@@ -1,77 +1,124 @@
 //Exercícios de interpretação de código:
 /*
-1. Foi criada uma função para converter
-um valor de dolar para reais.
-Essa função tem como parâmetro o valor em dolar. 
-Portanto, foi criada uma variável constante com o valor 
-da cotação do dólar, que será informado pelo usuário. 
-A função vai retornar (guardar) o valor do parâmetro em dolar multiplicada pela
-cotação informada pelo usuário.
-Fora da função foi criada uma nova variável
-nomeada de meu dinheiro onde foi informado
-o parâmetro (valor em dolar) de 100 dolares.
-Vai aparecer no console o valor de 100 dolares
-convertida em reais, esse valor será multiplicado
-pelo valor informado da cotação do dólar.
+        1. Foi criada uma função para converter
+        um valor de dolar para reais.
+        Essa função tem como parâmetro o valor em dolar. 
+        Portanto, foi criada uma variável constante com o valor 
+        da cotação do dólar, que será informado pelo usuário. 
+        A função vai retornar (guardar) o valor do parâmetro em dolar multiplicada pela
+        cotação informada pelo usuário.
+        Fora da função foi criada uma nova variável
+        nomeada de meu dinheiro onde foi informado
+        o parâmetro (valor em dolar) de 100 dolares.
+        Vai aparecer no console o valor de 100 dolares
+        convertida em reais, esse valor será multiplicado
+        pelo valor informado da cotação do dólar.
 */
 
 /*
-2. Foi criada uma função para calcular o valor
-final de um investimento, multiplicando o valor
-investido pela taxa de rendimento. 
-Criou-se uma função chamada investe dinheiro
-em que recebeu dois parâmetros de tipo de investimento
-e o seu valor. Criou-se uma variável sem valor
-inicial, a qual vai variar conforme o investimento
-escolhido. Foi usado o switch case, em que mostra opções
-fixas (cases) para cada investimento. No caso,
-foi informado na variável novo montante que o
-tipo de investimento escolhido foi "ações", portanto
-a função vai ir testando os cases até encontrar
-um case chamado "ações", quando encontrar vai 
-calcular o valor fornecido na const novo montante
-multiplicado pelo rendimento que é de 1.1. Como
-tem o break a função para de testar e coloca
-o valor obtido após o investimento (nesse caso vai
-ser de 165) no return. Com o console log, esse
-valor vai aparecer no console. O mesmo
-ocorrendo com o segundo montante, em que
-serão testado no switch até ser encontrado
-o case "tesouro direto", no caso, esse case
-não vai ser encontrado, portanto se encaixará
-no default, o que vai gerar uma mensagem de alerta
-escrita que "o tipo de investimento informado
-é incorreto".
+        2. Foi criada uma função para calcular o valor
+        final de um investimento, multiplicando o valor
+        investido pela taxa de rendimento. 
+        Criou-se uma função chamada investe dinheiro
+        em que recebeu dois parâmetros de tipo de investimento
+        e o seu valor. Criou-se uma variável sem valor
+        inicial, a qual vai variar conforme o investimento
+        escolhido. Foi usado o switch case, em que mostra opções
+        fixas (cases) para cada investimento. No caso,
+        foi informado na variável novo montante que o
+        tipo de investimento escolhido foi "ações", portanto
+        a função vai ir testando os cases até encontrar
+        um case chamado "ações", quando encontrar vai 
+        calcular o valor fornecido na const novo montante
+        multiplicado pelo rendimento que é de 1.1. Como
+        tem o break a função para de testar e coloca
+        o valor obtido após o investimento (nesse caso vai
+        ser de 165) no return. Com o console log, esse
+        valor vai aparecer no console. O mesmo
+        ocorrendo com o segundo montante, em que
+        serão testado no switch até ser encontrado
+        o case "tesouro direto", no caso, esse case
+        não vai ser encontrado, portanto se encaixará
+        no default, o que vai gerar uma mensagem de alerta
+        escrita que "o tipo de investimento informado
+        é incorreto".
 */
 /*
-3. No caso, foi criada uma array chamada de numeros em que
-forneceu alguns números dentro de []. Foram criada mais duas arrays
-vazias que serão preenchidas conforme o for..of usado.
-Por isso, o for...of está pegando uma variavel denominada numero
-de dentro da array numeros, se esse numero for par ele será empurrado
-para dentro da array1 e se não, se for ímpar, será empurrado para dentro
-da array2. No final, vai aparecer no console a quantidade de números da
-array numero (14), a quantidade de numeros pares (6) e a quantidade de numeros ímpares (8)
+        3. No caso, foi criada uma array chamada de numeros em que
+        forneceu alguns números dentro de []. Foram criada mais duas arrays
+        vazias que serão preenchidas conforme o for..of usado.
+        Por isso, o for...of está pegando uma variavel denominada numero
+        de dentro da array numeros, se esse numero for par ele será empurrado
+        para dentro da array1 e se não, se for ímpar, será empurrado para dentro
+        da array2. No final, vai aparecer no console a quantidade de números da
+        array numero (14), a quantidade de numeros pares (6) e a quantidade de numeros ímpares (8)
 */
 
 /*
-4. Foi criada uma array denominada de numeros, com alguns numeros dentro da colchetes.
-Foram criadas duas variáveis, a variável numero 1 foi atribuido o valor infinito,
-essa variável é considerada maior que todas as outras. Para variável numero2
-foi atribuido o valor 0. Foi usado o for...it para pegar uma variável numero
-de dentro da array numeros. Se esse numero for menor que a variável numero1,
-ou seja, menor que infinito, ao numero1 será atribuido o valor do numero. Portanto,
-no console.log(numero1) vai aparecer todos os numeros da array numeros, já que todos
-os numeros são menores que infinito. Se o numero for maior que o numero2, ou seja,
-maior que 0, ao numero2 será atribuido o valor do numero, no exemplo, todos os
-números positivos são maiores que 0, são esses números que irão aparecer no
-console.log(numero2)
+        4. Foi criada uma array denominada de numeros, com alguns numeros dentro da colchetes.
+        Foram criadas duas variáveis, a variável numero 1 foi atribuido o valor infinito,
+        essa variável é considerada maior que todas as outras. Para variável numero2
+        foi atribuido o valor 0. Foi usado o for...it para pegar uma variável numero
+        de dentro da array numeros. Se esse numero for menor que a variável numero1,
+        ou seja, menor que infinito, ao numero1 será atribuido o valor do numero. Portanto,
+        no console.log(numero1) vai aparecer todos os numeros da array numeros, já que todos
+        os numeros são menores que infinito. Se o numero for maior que o numero2, ou seja,
+        maior que 0, ao numero2 será atribuido o valor do numero, no exemplo, todos os
+        números positivos são maiores que 0, são esses números que irão aparecer no
+        console.log(numero2)
 */
 
 //Exercícios de Lógica de Programação:
-/*
-1.
 
+//1. 
+/*
+        3 exemplos de como percorrer uma lista (array) são por meio
+        do "for...of", do "for...each" e do "maps".
+        Exemplos:
+*/
+        //programa para classificar os numeros pares e impares:
+/*
+        let numeros = [57, 91, 200, 505, 890, 1050]
+
+        for(numero of numeros) {
+            if(numero % 2 === 0) {
+                console.log(`O número ${numero} é par`)
+            } else {
+                console.log(`O número ${numero} é impar`)
+            }
+        }
+*/
+        //programa para igualar salários:
+/*
+        let funcionarios = [
+            {nome: 'julia', salario: 2000},
+            {nome: 'erenita', salario: 5000},
+            {nome: 'joão', salario: 4000}
+        ]
+
+        funcionarios.forEach((funcionario, index, array) => {
+            funcionario.salario = 2000
+        })
+
+        console.log(funcionarios)
+*/
+
+        //programa para saber todos os signos de uma lista de pessoas:
+/*
+        const alunas = [
+            {nome: 'jessica', signo: 'libra'},
+            {ome: 'mari', signo:'câncer'},
+            {nome: 'leticia', signo:'gêmeos'}
+        ]
+
+        const signosAlunas = alunas.map((signos, index, array) => {
+            return signos.signo
+            
+        })
+        console.log(signosAlunas)
+*/
+/*
+array
 2.
 a)false
 b)true
