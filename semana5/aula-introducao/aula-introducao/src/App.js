@@ -13,7 +13,7 @@ function App() {
     <div>
         <div className="tela-inteira">
           <header>
-              <h1>Lab Tube</h1>
+              <h1>LabeTube</h1>
               <input type="text" placeholder="Busca" id="campoDeBusca" />
           </header>
 
@@ -65,9 +65,7 @@ function App() {
               </section>
           </main>
 
-          <footer>
-              <h4>Oi! Eu moro no footer!</h4>
-          </footer>
+         
       </div>   
     </div>
   );

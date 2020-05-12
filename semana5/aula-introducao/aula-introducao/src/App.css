@@ -12,13 +12,24 @@ body {
 }
 
 header {
-  background-color: orange;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 35vw 0 50px;
   height: 10%;
+  border-bottom-style: groove;
 }
+
+h1 {
+  font-family: fantasy;
+  font-size: medium;
+}
+
+input {
+  width: 30vw;
+}
+
 
 main {
   min-height: 80%;
@@ -26,8 +37,8 @@ main {
 }
 
 .menu-vertical {
-  flex-basis: 200px;
-  border-right-style: solid;
+  flex-basis: 20vw;
+  border-right-style: groove;
   border-right-width: thin;
 }
 
@@ -36,12 +47,14 @@ main {
 }
 
 .painel-de-videos {
-  padding-left: 20px;
-  padding-top: 20px;
+  padding-left: 2vw;
+  padding-top: 5vw;
+  height: 100vh;
   flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(4, 24.8% 0.2%);
   grid-template-rows: repeat(4, 270px 20px);
+  background-color: rgba(128, 128, 128, 0.103);
 }
 
 .media1 {
@@ -89,8 +102,7 @@ main {
   display: grid;
   grid-template-rows: 3fr 1fr;
   grid-template-columns: 1fr;
-  border-style: solid;
-  border-width: thin; 
+  
   align-items: start;
   justify-items: stretch;
 }
@@ -98,7 +110,7 @@ main {
 
 footer {
   height: 10%;
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.479);
   margin: 0;
   padding: 0;
   display: flex;
