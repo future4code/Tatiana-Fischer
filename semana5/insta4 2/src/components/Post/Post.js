@@ -16,9 +16,23 @@ class Post extends React.Component {//metodo constructor
     numeroComentarios: 0
   }
 
-  onClickCurtida = () => {
-    console.log('Curtiu!')
-  }//sendo usada quando se clica no coração de curtidas, nesse caso salva no console
+  onClickCurtida = () => { 
+    if(this.state.curtido === false) {
+      this.setState({
+        numeroCurtidas: this.state.numeroCurtidas +1,
+        curtido: (this.state.curtido = true),
+        
+      })
+      console.log("curtiu")
+
+    } else { 
+      this.setState({ 
+      curtido: (this.state.curtido = false),
+      numeroCurtidas: this.state.numeroCurtidas -1
+      }) 
+      console.log("descurtiu")     
+    }
+    }//sendo usada quando se clica no coração de curtidas, nesse caso salva no console
 
   onClickComentario = () => {//sendo usada quando clicar no botão + para  escrever um comentário
     this.setState({
@@ -36,21 +50,23 @@ class Post extends React.Component {//metodo constructor
   }
 
   render() {
-    let iconeCurtida
 
-    if(this.state.curtido) {
-      iconeCurtida = iconeCoracaoPreto
+    let iconeCurtida
+    if(this.state.curtido === true) {
+      iconeCurtida =  iconeCoracaoPreto
+
     } else {
-      iconeCurtida = iconeCoracaoBranco
+      iconeCurtida = iconeCoracaoBranco 
+     
     }
 
-    let componenteComentario
-
+    
+ let componenteComentario
     if(this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
     }
 
-    return <div className={'post-container'}>
+    return ( <div className={'post-container'}>
       <div className={'post-header'}>
         <img className={'user-photo'} src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
         <p>{this.props.nomeUsuario}</p>
@@ -73,6 +89,7 @@ class Post extends React.Component {//metodo constructor
       </div>
       {componenteComentario}
     </div>
+    )
   }
 }
 

@@ -1,25 +1,28 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './SecaoComentario.css'
 
-export class SecaoComentario extends Component {
+export class SecaoComentario extends React.Component {
 	state = {
-
+		comentario: ""
 	}
 
-	onChangeComentario() {
-		console.log()
+	onChangeComentario = (event) => {
+		console.log(event.target.value)
+		this.setState = { comentario: event.target.value}
 	}
 
 	render() {
-		return <div className={'comment-container'}>
-			<input
-				className={'input-comentario'}
-				placeholder={'Comentário'}
-				value={this.onClickComentario}//se deixar '' não vai dar pra preencher
-				onChange={this.onChangeComentario}
-			/>
-			
-			<button onClick={this.props.aoEnviar}>Enviar</button>
-		</div>
+		return (
+			<div className='comment-container'>
+				<input
+					className='input-comentario'
+					placeholder='Comentário'
+					value={this.onClickComentario}//se deixar '' não vai dar pra preencher
+					onChange={this.onChangeComentario}
+				/>
+				
+				<button onClick={this.props.aoEnviar}>Enviar</button>
+			</div>
+		)
 	}
 }
