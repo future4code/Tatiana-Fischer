@@ -7,7 +7,10 @@ import iconeCoracaoBranco from '../../img/favorite-white.svg'
 import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario' //componente
- 
+
+
+
+
 class Post extends React.Component {//metodo constructor
   state = {//estado inicial, antes de serem executadas as funções
     curtido: false, //4 propriedades são inicializadas
@@ -68,6 +71,8 @@ class Post extends React.Component {//metodo constructor
     }
 
     return ( 
+    
+   
     <div className={'post-container'}>
       <div className={'post-header'}>
         <img className={'user-photo'} src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
@@ -89,6 +94,8 @@ class Post extends React.Component {//metodo constructor
           valorContador={this.state.numeroComentarios}
         />
       </div>
+     
+
       {componenteComentario}
     </div>
     )

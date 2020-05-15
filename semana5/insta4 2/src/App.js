@@ -1,6 +1,18 @@
 import React from 'react';
 import './App.css';
 import Post from './components/Post/Post';
+import style from 'styled-components'
+
+const Formulario = style.div`
+width: 22%;
+display:flex;
+flex-direction:column;
+`
+const Botão = style.button`
+color: "blue";
+border: none,
+`
+
 
 class App extends React.Component {
 
@@ -69,28 +81,32 @@ class App extends React.Component {
 
   return (
     <div className={'app-container'}>
+        <Formulario>
         <div>{listaDePosts}</div>
-        <input
-      value={this.state.valorInputNome}
-      onChange={this.onChangeInputNome}
-      placeholder={"usuário"}
-      />
+        
+         <input        
+          value={this.state.valorInputNome}
+          onChange={this.onChangeInputNome}
+          placeholder={"usuário"}
+          />
 
-      <input
-      value={this.state.valorInputFotoUsuario}
-      onChange={this.onChangeInputFotoUsuario}
-      placeholder={"foto perfil"}
+          <input
+          value={this.state.valorInputFotoUsuario}
+          onChange={this.onChangeInputFotoUsuario}
+          placeholder={"foto perfil"}
+          
+          />
+
+          <input
+          value={this.state.valorInputFotoPost}
+          onChange={this.onChangeInputFotoPost}//sem state
+          placeholder={"foto post"}
+          
+          />
+   
       
-      />
-
-      <input
-      value={this.state.valorInputFotoPost}
-      onChange={this.onChangeInputFotoPost}//sem state
-      placeholder={"foto post"}
-      
-      />
-
-      <button onClick={this.adicionarPost}>Postar</button>
+      <Botão><button onClick={this.adicionarPost}>Postar</button></Botão>
+      </Formulario>
     </div>
   )
 
