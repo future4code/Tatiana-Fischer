@@ -7,7 +7,7 @@ import iconeCoracaoBranco from '../../img/favorite-white.svg'
 import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario' //componente
-
+ 
 class Post extends React.Component {//metodo constructor
   state = {//estado inicial, antes de serem executadas as funções
     curtido: false, //4 propriedades são inicializadas
@@ -17,6 +17,7 @@ class Post extends React.Component {//metodo constructor
   }
 
   onClickCurtida = () => { 
+    
     if(this.state.curtido === false) {
       this.setState({
         numeroCurtidas: this.state.numeroCurtidas +1,
@@ -66,7 +67,8 @@ class Post extends React.Component {//metodo constructor
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
     }
 
-    return ( <div className={'post-container'}>
+    return ( 
+    <div className={'post-container'}>
       <div className={'post-header'}>
         <img className={'user-photo'} src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
         <p>{this.props.nomeUsuario}</p>
