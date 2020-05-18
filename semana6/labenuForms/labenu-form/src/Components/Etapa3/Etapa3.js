@@ -26,9 +26,10 @@ class Etapa3 extends React.Component {
             
             <p>6. Você fez algum curso complementar?</p>
             <select>
-                <option>Curso técnico</option>
-                <option>Curso de inglês</option>
-                <option>Não fiz curso complementar</option>
+              <option>Nenhum</option>
+              <option>Curso técnico</option>
+              <option>Curso de inglês</option>
+              <option>Não fiz curso complementar</option>
                 
             </select>
          </form>

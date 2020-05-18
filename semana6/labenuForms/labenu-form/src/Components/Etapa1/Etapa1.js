@@ -27,10 +27,11 @@ class Etapa1 extends React.Component {
             <input></input>
             <p>4.Qual a sua escolaridade?</p>
             <select>
-                <option>Ensino Médio Incompleto</option>
-                <option>Ensino Médio Completo</option>
-                <option>Ensino Superior Incompleto</option>
-                <option>Ensino Superior Completo</option>
+              <option>Nenhum</option>
+              <option>Ensino Médio Incompleto</option>
+              <option>Ensino Médio Completo</option>
+              <option>Ensino Superior Incompleto</option>
+              <option>Ensino Superior Completo</option>
             </select>
          </form>
     </Container>
