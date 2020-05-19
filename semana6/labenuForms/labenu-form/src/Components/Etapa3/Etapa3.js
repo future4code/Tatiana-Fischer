@@ -11,6 +11,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+  background-color: rgb(255,255,255,0.8);
+  height: 60vh;
+  width: 80vw;
+  margin: auto;
 `;
 
 

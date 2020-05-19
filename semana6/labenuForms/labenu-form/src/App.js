@@ -6,25 +6,25 @@ import Etapa2 from './Components/Etapa2/Etapa2';
 import Etapa3 from './Components/Etapa3/Etapa3';
 import Final from './Components/Final/Final';
 
+
 import styled from 'styled-components';
 
 const ContainerApp = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  background-color: rgb(0,0,0,0.9);
+  height: 100vh;
+  
 `
 
 const Botao = styled.button`
   margin: auto;
-  width: 100px;
-  padding: 10px;
+  width: 80px;
+  padding: 5px;
+  margin-top: 20px;
  
   
 `
-
-
-
-
 class App extends React.Component {
 
   state = {
@@ -37,22 +37,15 @@ class App extends React.Component {
       case 1:
         return <Etapa1 />
         
-
         case 2:
           return <Etapa2 />
-        
-          
-
+                  
           case 3:
             return <Etapa3 />
-        
-           
-
+                   
             case 4:
               return <Final />
-        
-              
-    
+                      
       default:
         break;
     }
@@ -65,22 +58,12 @@ class App extends React.Component {
     }
   }
   render() {
-  const desaparecerBotao = this.state.etapa === 4 ? ('') : ( <Botao onClick={this.irParaProximaEtapa}>
+  const desaparecerBotao = this.state.etapa === 4 ? ("") : ( <Botao onClick={this.irParaProximaEtapa}>
     Próxima Etapa 
     </Botao>)
   
   return (
   
-/*   
-    <Etapa1/>
-    <hr></hr>
-    <Etapa2/>
-    <hr></hr>
-    <Etapa3/>
-    <hr></hr>
-    <Final/> 
-    */
-   
    <ContainerApp>
      {this.renderizaEtapa()}
      { desaparecerBotao }
