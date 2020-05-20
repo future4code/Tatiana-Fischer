@@ -11,23 +11,23 @@ const TarefaList = styled.ul`
 const Tarefa = styled.li`
   text-align: left;
   text-decoration: ${({completa}) => (completa ? 'line-through' : 'none')};
-  background-color: pink;
+  
 `
 
 const InputsContainer = styled.div`
   display: grid;
   grid-auto-flow: column;
   gap: 10px;
-  background-color: orange;
+  
 `
 
 class App extends React.Component {
     state = {
         tarefas: [
-        //{
-          //id: Date.now(),//gera um id para cada tarefa
-          //texto: '',
-          //completa: false, //indica se a tarefa está completa
+       // {
+         // id: Date.now(),//gera um id para cada tarefa
+         // texto: '',
+         // completa: false, //indica se a tarefa está completa
         //}, 
         
       ],
@@ -43,7 +43,7 @@ class App extends React.Component {
 
   };
 
-  onChangeInput = (event) => {
+  onChangeInput = (event) => { 
     this.setState({ inputValue: event.target.value})
   }
 
@@ -54,13 +54,29 @@ class App extends React.Component {
       completa: false,
     } 
     const novaListaTarefas = [...this.state.tarefas, novaTarefa];
-
+    
      this.setState({ tarefas: novaListaTarefas});
      this.state.inputValue = "";
   }
 
   selectTarefa = (id) => {//passar por todos ids da array, quando for igual o id do on click esse vai ter que riscar. if tarefa.id === id, tarefa.id = true, colocar em um novo array e dar um set state
-  console.log('seleciona tarefa', id)
+  
+   const listaTarefasCompletas = this.state.tarefas.map((tarefa, index, array) => {
+     if(id === tarefa.id) {
+       const tarefasCompletas = {
+
+        ...tarefa,
+        completa: !tarefa.completa
+       
+       }
+       console.log(tarefasCompletas)
+       return tarefasCompletas
+     } else {
+       return tarefa
+     }
+  })
+
+  this.setState({tarefas: listaTarefasCompletas})
   }
 
   onChangeFilter = (event) => {
@@ -102,8 +118,9 @@ class App extends React.Component {
           {listaFiltrada.map(tarefa => {
             return (
               <Tarefa
+               
                 completa={tarefa.completa}
-                onClick={this.selectTarefa}
+                onClick={() => this.selectTarefa(tarefa.id)}//() => (serve para que nao clique direto, antes leia o vazio e depois rosee)
               >
                 {tarefa.texto}
               </Tarefa>
