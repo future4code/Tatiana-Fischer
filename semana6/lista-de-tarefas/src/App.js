@@ -34,13 +34,18 @@ class App extends React.Component {
       inputValue: '',
       filter: ''
     };
+//local stronge só armazena "strings"!!
+  componentDidUpdate = () => {
+     const novasTarefas = this.state
 
-  componentDidUpdate() {
-
+     localStorage.setItem("tarefas", JSON.stringify(novasTarefas))
   };
 
-  componentDidMount() {
+  componentDidMount = () => {
+    const tarefaNoLocalStorge = localStorage.getItem("tarefas")
+    const tarefaObjeto = JSON.parse(tarefaNoLocalStorge)
 
+    console.log(tarefaObjeto)
   };
 
   onChangeInput = (event) => { 
