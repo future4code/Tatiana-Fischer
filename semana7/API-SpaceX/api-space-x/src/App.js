@@ -8,6 +8,7 @@ import axios from "axios";
 export default class App extends React.Component {
   state = {
     missions: [],
+    missionId: [],
     missionDescription: "",
   };
 
@@ -24,32 +25,29 @@ export default class App extends React.Component {
       });
   };
 
-  /*chooseMission = (event) => {
-    const mission_name = event.target.value;
+  chooseMission = (event) => {
+    this.state.missionId.map((missionId) => {
+      this.state.missionId.push(missionId.mission_id);
+    });
+    const mission_id = event.target.value;
     axios
-      .get(`https://api.spacexdata.com/v3/missions/${mission_name}`)
-      .then((response) => {
-        console.log(response.data.description);
-      })
+      .get(`https://api.spacexdata.com/v3/missions/${mission_id}`)
+      .then((response) => {})
       .catch((error) => {
         console.log(error);
       });
-  };*/
+  };
   render() {
-    /* const description = this.state.missionDescription ? (
-      <p>{this.state.missionDescription}</p>
-    ) : (
-      <div />
-    );*/
     const mission = this.state.missions.map((mission) => {
       return (
         <option value={mission.mission_name}>{mission.mission_name}</option>
       );
     });
+
     return (
       <div>
         <h3>SpaceX missions</h3>
-        <select>
+        <select onChange={this.chooseMission}>
           <option value="">choose the mission</option>
 
           {mission}
