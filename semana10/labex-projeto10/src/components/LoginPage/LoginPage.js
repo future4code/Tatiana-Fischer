@@ -4,12 +4,19 @@ import { useHistory } from "react-router-dom";
 function LoginPage() {
   const history = useHistory();
 
-  const goToLogin = () => {
-    history.push("login");
+  const goToHome = () => {
+    history.push("/");
+  };
+
+  const goToListTrips = () => {
+    history.replace("/trips-list");
   };
   return (
     <div>
-      <h1>LoginPage{goToLogin}</h1>
+      <input value="name"></input>
+      <input value="senha"></input>
+      <button onClick={goToListTrips}>Login</button>
+      <button onClick={goToHome}>VOLTAR HOME</button>
     </div>
   );
 }

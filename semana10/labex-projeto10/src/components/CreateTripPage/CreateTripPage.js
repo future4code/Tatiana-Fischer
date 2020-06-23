@@ -1,12 +1,23 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-function CreatePage() {
+const CreateTripPage = () => {
+  const history = useHistory();
+
+  const goToListTrips = () => {
+    history.push("/trips-list");
+  };
+
   return (
     <div>
-      <h1>CreateTripPage</h1>
+      <form>
+        <input></input>
+        <input></input>
+        <input></input>
+        <button onClick={goToListTrips}>CRIAR</button>
+      </form>
     </div>
   );
-}
+};
 
-export default CreatePage;
+export default CreateTripPage;
