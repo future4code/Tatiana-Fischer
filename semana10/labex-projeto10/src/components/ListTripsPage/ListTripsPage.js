@@ -18,11 +18,13 @@ const ListTripsPage = () => {
   return (
     <div>
       <ul>
-        <li onClick={goToDetails}>Viagem 1</li>
+        <li>
+          Viagem 1<button onClick={goToDetails}>+Info</button>
+        </li>
         <li>Viagem 2</li>
       </ul>
       <button onClick={goToCreateTrip}>NOVA VIAGEM</button>
-      <button onClick={goToHome}>VOLTAR HOME</button>
+      <button onClick={goToHome}>LOGOUT</button>
     </div>
   );
 };
