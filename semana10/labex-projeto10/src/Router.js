@@ -9,6 +9,7 @@ import ListTripsPage from "./components/ListTripsPage/ListTripsPage.js";
 import TripDetailsPage from "./components/TripDetailsPage/TripDetailsPage.js";
 import CreateTripPage from "./components/CreateTripPage/CreateTripPage.js";
 import Register from "./components/Register/Register.js";
+import CandidatesPage from "./components/CandidatesPage/CandidatesPage.js";
 
 const Router = () => {
   return (
@@ -23,7 +24,7 @@ const Router = () => {
         <Route exact path="/trips-list">
           <ListTripsPage />
         </Route>
-        <Route exact path="/trips-details">
+        <Route exact path="/trips-details/:id">
           <TripDetailsPage />
         </Route>
 
@@ -31,6 +32,9 @@ const Router = () => {
           <CreateTripPage />
         </Route>
 
+        <Route exact path="/candidates">
+          <CandidatesPage />
+        </Route>
         <Route exact path="/">
           <HomePage />
         </Route>

@@ -1,29 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
+import axios from "axios";
 
-const ContainerLogin = styled.div`
+const FormLogin = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   margin: 100px auto;
-  width: 35vw;
-  height: 70vh;
+  width: 450px;
+  height: 600px;
 
   background-color: #dee5e5;
-  opacity: 0.95;
+  color: #141717;
+  opacity: 0.85;
   border-radius: 8px;
 
   font-size: 18px;
-`;
 
-const ContainerEmailAndPassword = styled.section`
-  display: flex;
-  flex-direction: column;
+  :hover {
+    background-color: white;
+  }
 `;
-
+const MainTitle = styled.h3`
+  /* color: #1929c4; */
+  padding-bottom: 10px;
+  margin-top: 0;
+  font-size: 36px;
+`;
 const Inputs = styled.input`
   border-radius: 8px;
   border: none;
@@ -31,33 +37,92 @@ const Inputs = styled.input`
   height: 24px;
   width: 250px;
   margin: 10px;
+  background-color: #ebebeb;
+  border: 1px solid #a3a3a3;
+  cursor: pointer;
+  :hover {
+    border: 1px solid #272d2d;
+  }
+  font-size: 18px;
 `;
-function LoginPage() {
+
+const baseUrl =
+  "https://us-central1-labenu-apis.cloudfunctions.net/labeX/tatiana";
+
+const LoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const history = useHistory();
 
+  ///////////pegar os valores dos inputs
+  const handleUpdateEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleUpdatePassword = (event) => {
+    setPassword(event.target.value);
+  };
+  ///////////opção de voltar para a home
   const goToHome = () => {
     history.push("/");
   };
 
-  const goToListTrips = () => {
-    history.replace("/trips-list");
+  //////////fazer login e mudar de página
+
+  const login = async (event) => {
+    event.preventDefault();
+    const loginBody = {
+      email: email,
+      password: password,
+    };
+    try {
+      const response = await axios.post(`${baseUrl}/login`, loginBody);
+
+      window.localStorage.setItem("token", response.data.token);
+      alert("Logado com sucesso!");
+      history.push("/trips-list");
+    } catch (error) {
+      console.log(error);
+      alert("Não foi possível realizar o Login!");
+    }
   };
+
+  // //se fez login, é direcionado para a página de lista de viagens
+  useEffect(() => {
+    const token = window.localStorage.getItem("token");
+    if (token !== null) {
+      history.push("/trips-list");
+    }
+  }, [history]);
+
   return (
-    <ContainerLogin>
-      <ContainerEmailAndPassword>
-        <label>E-mail:</label>
-        <Inputs type="email" placeholder="Escreva seu login" />
-      </ContainerEmailAndPassword>
-      <ContainerEmailAndPassword>
-        <label>Senha:</label>
-        <Inputs type="password" placeholder="Escreva sua senha" />
-      </ContainerEmailAndPassword>
+    <FormLogin onSubmit={login}>
+      <MainTitle>Faça Login</MainTitle>
+      <label>E-mail:</label>
+      <Inputs
+        type="email"
+        value={email}
+        placeholder="Escreva seu login"
+        onChange={handleUpdateEmail}
+        required
+      />
+
+      <label>Senha:</label>
+      <Inputs
+        type="password"
+        value={password}
+        placeholder="Escreva sua senha"
+        onChange={handleUpdatePassword}
+        required
+      />
+
       <section>
-        <button onClick={goToListTrips}>Login</button>
+        <button>Login</button>
         <button onClick={goToHome}>VOLTAR HOME</button>
       </section>
-    </ContainerLogin>
+    </FormLogin>
   );
-}
+};
 
 export default LoginPage;

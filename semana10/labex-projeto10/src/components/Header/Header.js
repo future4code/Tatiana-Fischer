@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -18,15 +19,24 @@ const Logo = styled.h1`
 
 const Menu = styled.h3`
   margin-right: 36px;
+  cursor: pointer;
 `;
+//////////////////////////////////////////////////////////////////////////////////
 const Header = () => {
+  ///////////opção de voltar para a home
+  const history = useHistory();
+  const goToHome = () => {
+    history.push("/");
+  };
+  //NÃO ESTÁ FUNCIONANDO
+
   return (
     <HeaderContainer>
       <section>
         <Logo>LabeX</Logo>
       </section>
 
-      <Menu>Home</Menu>
+      <Menu onClick={goToHome}>Home</Menu>
     </HeaderContainer>
   );
 };

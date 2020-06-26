@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 import AdmMenu from "../AdmMenu/AdmMenu";
 
-function TripDetailsPage() {
+const CandidatesPage = () => {
   const history = useHistory();
-  const goToListTrips = () => {
-    history.replace("/trips-list");
-  };
 
   //impedir que entrem sem ter um token
   useEffect(() => {
@@ -15,14 +13,13 @@ function TripDetailsPage() {
       history.push("/login");
     }
   }, [history]);
+
   return (
     <div>
       <AdmMenu />
-      <h3>Name's trip</h3>
-      <p>Description</p>
-      <button onClick={goToListTrips}>VER TODAS VIAGENS</button>
+      <div>Lista Candidates</div>
     </div>
   );
-}
+};
 
-export default TripDetailsPage;
+export default CandidatesPage;
