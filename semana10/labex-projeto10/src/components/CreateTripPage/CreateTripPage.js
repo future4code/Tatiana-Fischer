@@ -26,60 +26,48 @@ const FormCreateTrip = styled.form`
   }
 `;
 
-const MainTitle = styled.h3`
-  /* color: #1929c4; */
-  padding-bottom: 10px;
-  margin-top: 0;
-  font-size: 36px;
-`;
-const Inputs = styled.input`
-  border-radius: 8px;
-  border: none;
-  padding: 16px;
-  height: 24px;
-  width: 250px;
-  margin: 10px;
-  background-color: #ebebeb;
-  border: 1px solid #a3a3a3;
-  cursor: pointer;
-  :hover {
-    border: 1px solid #272d2d;
-  }
-  font-size: 18px;
-`;
+// const MainTitle = styled.h3`
+//   /* color: #1929c4; */
+//   padding-bottom: 10px;
+//   margin-top: 0;
+//   font-size: 36px;
+// `;
+// const Inputs = styled.input`
+//   border-radius: 8px;
+//   border: none;
+//   padding: 16px;
+//   height: 24px;
+//   width: 250px;
+//   margin: 10px;
+//   background-color: #ebebeb;
+//   border: 1px solid #a3a3a3;
+//   cursor: pointer;
+//   :hover {
+//     border: 1px solid #272d2d;
+//   }
+//   font-size: 18px;
+// `;
 
 /////////////////////////////////////////////////////////
-const baseUrl =
-  "https://us-central1-labenu-apis.cloudfunctions.net/labeX/tatiana";
 
 const CreateTripPage = () => {
-  const [name, setName] = useState("");
-  const [planet, setPlanet] = useState([]);
-  const [date, setDate] = useState("");
-  const [description, setDescription] = useState("");
-  const [durationInDays, setDurationInDays] = useState("");
+  //estado inicial para todos os inputs
+  const [form, setForm] = useState({
+    name: "",
+    planet: "",
+    date: "",
+    description: "",
+    durationInDays: "",
+  });
 
-  const history = useHistory();
-
-  ///////////pegar os valores dos inputs
-  const handleUpdateName = (event) => {
-    setName(event.target.value);
-  };
-
-  const handleUpdatePlanet = (event) => {
-    setPlanet(event.target.value);
-  };
-  const handleUpdateDate = (event) => {
-    setDate(event.target.value);
-  };
-  const handleUpdateDescription = (event) => {
-    setDescription(event.target.value);
-  };
-  const handleUpdateDurationInDays = (event) => {
-    setDurationInDays(event.target.value);
+  //pegar valores do input
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setForm({ ...form, [name]: value });
   };
 
   //impedir que entrem sem ter um token
+  const history = useHistory();
   useEffect(() => {
     const token = window.localStorage.getItem("token");
     if (token === null) {
@@ -88,95 +76,82 @@ const CreateTripPage = () => {
   }, [history]);
 
   //////////Criar nova viagem
+  const baseUrl =
+    "https://us-central1-labenu-apis.cloudfunctions.net/labeX/tatiana";
 
-  const createTrip = (event) => {
+  const createNewTrip = async (event) => {
     event.preventDefault();
-    const body = {
-      name: name,
-      planet: planet,
-      date: date,
-      description: description,
-      durationInDays: durationInDays,
-    };
 
     const token = localStorage.getItem("token");
+
+    const body = {
+      name: form.name,
+      planet: form.planet,
+      date: form.date,
+      description: form.description,
+      durationInDays: form.durationInDays,
+    };
 
     const axiosConfig = {
       headers: {
         auth: token,
       },
     };
-    axios
-      .post(`${baseUrl}/trips`, body, axiosConfig)
-      .then(() => {
-        console.log(name);
-        alert("Trip criada com sucesso");
-        history.push("/trips-list");
-      })
-      .catch((error) => {
-        console.log(error);
-        alert(error);
-      });
+
+    try {
+      const response = await axios.post(`${baseUrl}/trips`, body, axiosConfig);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  // //se fez login, é direcionado para a página de lista de viagens
-  useEffect(() => {
-    const token = window.localStorage.getItem("token");
-    if (token !== null) {
-      history.push("/trips-list");
-    }
-  }, [history]);
   return (
     <div>
       <AdmMenu />
-      <FormCreateTrip onSubmit={createTrip}>
-        <MainTitle>Create a new space trip:</MainTitle>
+      <FormCreateTrip onSubmit={createNewTrip}>
+        <h3>Create a new space trip:</h3>
         <label>Name:</label>
-        <Inputs
+        <input
+          name="name"
+          value={form.name}
+          onChange={handleInputChange}
           type="text"
-          value={name}
-          placeholder="Trip's Name"
-          onChange={handleUpdateName}
-          required
         />
-
         <label>Planet:</label>
-        <Inputs
-          type="select"
-          value={planet}
-          placeholder="Planet's Name"
-          onChange={handleUpdatePlanet}
-          required
+        <select
+          name="planet"
+          value={form.planet}
+          onChange={handleInputChange}
+          type="text"
         >
           <option></option>
-          <option>Planets</option>
-        </Inputs>
+          <option>planetas</option>
+        </select>
 
         <label>Date:</label>
-        <Inputs
+        <input
+          name="date"
+          value={form.date}
+          onChange={handleInputChange}
           type="date"
-          value={date}
-          placeholder="Start Day"
-          onChange={handleUpdateDate}
-          required
-        />
-        <label>Description:</label>
-        <Inputs
-          type="text"
-          value={description}
-          placeholder="Description"
-          onChange={handleUpdateDescription}
-          required
-        />
-        <label>Duration In Days:</label>
-        <Inputs
-          type="number"
-          value={durationInDays}
-          placeholder="Duration In Days"
-          onChange={handleUpdateDurationInDays}
-          required
         />
 
+        <label>Description:</label>
+        <input
+          name="description"
+          value={form.description}
+          onChange={handleInputChange}
+          type="text"
+        />
+
+        <label>Duration In Days:</label>
+        <input
+          name="durationInDays"
+          value={form.durationInDays}
+          onChange={handleInputChange}
+          type="number"
+        />
         <button>CREATE TRIP</button>
       </FormCreateTrip>
     </div>

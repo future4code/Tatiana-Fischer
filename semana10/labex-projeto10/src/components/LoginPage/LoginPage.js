@@ -50,19 +50,19 @@ const baseUrl =
   "https://us-central1-labenu-apis.cloudfunctions.net/labeX/tatiana";
 
 const LoginPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  ///////////pegar os valores dos inputs
+
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setForm({ ...form, [name]: value });
+  };
 
   const history = useHistory();
-
-  ///////////pegar os valores dos inputs
-  const handleUpdateEmail = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handleUpdatePassword = (event) => {
-    setPassword(event.target.value);
-  };
   ///////////opção de voltar para a home
   const goToHome = () => {
     history.push("/");
@@ -73,8 +73,8 @@ const LoginPage = () => {
   const login = async (event) => {
     event.preventDefault();
     const loginBody = {
-      email: email,
-      password: password,
+      email: form.email,
+      password: form.password,
     };
     try {
       const response = await axios.post(`${baseUrl}/login`, loginBody);
@@ -102,18 +102,20 @@ const LoginPage = () => {
       <label>E-mail:</label>
       <Inputs
         type="email"
-        value={email}
+        name="email"
+        value={form.email}
         placeholder="Escreva seu login"
-        onChange={handleUpdateEmail}
+        onChange={handleInputChange}
         required
       />
 
       <label>Senha:</label>
       <Inputs
         type="password"
-        value={password}
+        name="password"
+        value={form.password}
         placeholder="Escreva sua senha"
-        onChange={handleUpdatePassword}
+        onChange={handleInputChange}
         required
       />
 
