@@ -1,6 +1,6 @@
+import { useHistory } from "react-router-dom";
 import React from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -17,10 +17,11 @@ const Logo = styled.h1`
   margin-left: 36px;
 `;
 
-const Menu = styled.h3`
+const MenuIcon = styled.h6`
   margin-right: 36px;
   cursor: pointer;
 `;
+
 //////////////////////////////////////////////////////////////////////////////////
 const Header = () => {
   ///////////opção de voltar para a home
@@ -36,7 +37,7 @@ const Header = () => {
         <Logo>LabeX</Logo>
       </section>
 
-      <Menu onClick={goToHome}>Home</Menu>
+      <MenuIcon onClick={goToHome}>Home</MenuIcon>
     </HeaderContainer>
   );
 };

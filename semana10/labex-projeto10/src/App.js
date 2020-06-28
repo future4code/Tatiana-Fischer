@@ -13,7 +13,7 @@ const ContainerApp = styled.div`
   background-repeat: space;
   background-attachment: fixed;
   background-position: center;
-  height: 120vh;
+  height: auto;
   background-size: cover;
   /* opacity: 0.8; */
   color: white;

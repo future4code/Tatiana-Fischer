@@ -7,21 +7,25 @@ const FormLogin = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 
   margin: 100px auto;
-  width: 450px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
 
-  background-color: #dee5e5;
-  color: #141717;
-  opacity: 0.85;
+  background-color: #141717;
+
+  opacity: 0.8;
   border-radius: 8px;
+  border: 0.5px solid #dee5e5;
+  color: #dee5e5;
+  font-size: 24px;
 
-  font-size: 18px;
+  margin-bottom: 200px;
 
   :hover {
-    background-color: white;
+    opacity: 0.9;
   }
 `;
 const MainTitle = styled.h3`

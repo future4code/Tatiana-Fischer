@@ -15,7 +15,8 @@ const ContainerHome = styled.div`
 `;
 
 const CardUserAndLogin = styled.div`
-  background-color: #dee5e5; //branco
+  background-color: #dee5e5;
+  /* //branco */
   opacity: 0.8;
 
   display: flex;
@@ -24,7 +25,8 @@ const CardUserAndLogin = styled.div`
   justify-content: space-evenly;
 
   border-radius: 8px;
-  color: #141717; //preta
+  color: #141717;
+  /* //preta */
   height: 300px;
   width: 400px;
   :hover {

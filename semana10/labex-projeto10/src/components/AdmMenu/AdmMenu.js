@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const AdmMenuContainer = styled.header`
   display: flex;
@@ -8,16 +8,19 @@ const AdmMenuContainer = styled.header`
   align-items: center;
   justify-content: space-evenly;
 
-  width: 500px;
+  width: 1000px;
 
   /* background-color: #1e2323; */
   color: #dee5e5;
   margin: auto;
-  font-size: 24px;
-
-  cursor: pointer;
+  font-size: 36px;
 `;
-
+const TitleAdmMenu = styled.h6`
+  cursor: pointer;
+  :hover {
+    text-decoration: underline;
+  }
+`;
 //////////////////////////////////////////////////////////////////////////////////
 const AdmMenu = () => {
   ///////////opção de ir para ListTrips, Criar Trp, Logout, aprovar quem se registrou
@@ -39,10 +42,10 @@ const AdmMenu = () => {
 
   return (
     <AdmMenuContainer>
-      <h6 onClick={goToTripsList}>ALL TRIPS</h6>
-      <h6 onClick={goToTripsCreate}>NEW TRIP</h6>
-      <h6 onClick={goToCandidates}>CANDIDATES</h6>
-      <h6 onClick={logout}>LOGOUT</h6>
+      <TitleAdmMenu onClick={goToTripsList}>TODAS VIAGENS</TitleAdmMenu>
+      <TitleAdmMenu onClick={goToTripsCreate}>CRIAR VIAGEM</TitleAdmMenu>
+      <TitleAdmMenu onClick={goToCandidates}>CANDIDATOS</TitleAdmMenu>
+      <TitleAdmMenu onClick={logout}>LOGOUT</TitleAdmMenu>
     </AdmMenuContainer>
   );
 };

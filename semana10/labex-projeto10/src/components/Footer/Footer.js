@@ -7,13 +7,13 @@ const FooterContainer = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  background-color: #141717;
+  /* background-color: #141717; */
   color: #dee5e5;
-  font-size: 10px;
+  font-size: 12px;
 
   /* margin-top: 400px; */
   margin-bottom: 0;
-  height: 200px;
+  height: 150px;
 `;
 
 const FooterIcons = styled.h1`
@@ -23,18 +23,23 @@ const FooterIcons = styled.h1`
   justify-content: space-between;
   margin-bottom: 0;
   width: 40vw;
+`;
 
+const TitleFooter = styled.h6`
   cursor: pointer;
+  :hover {
+    text-decoration: underline;
+  }
 `;
 
 const Footer = () => {
   return (
     <FooterContainer>
       <FooterIcons>
-        <p>TWITER</p>
-        <p>YOUTUBE</p>
-        <p>INSTAGRAM</p>
-        <p>LINKEDIN</p>
+        <TitleFooter>TWITER</TitleFooter>
+        <TitleFooter>YOUTUBE</TitleFooter>
+        <TitleFooter>INSTAGRAM</TitleFooter>
+        <TitleFooter>LINKEDIN</TitleFooter>
       </FooterIcons>
 
       <p>LABEX © 2020</p>
