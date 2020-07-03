@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/*cabeçalho*/
+.containerHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  line-height: 70px;
+  width: 100vw;
+  background-color: whitesmoke;
+  text-align: center;
+}
+input {
+  height: 20px;
+  position: relative;
+  width: 20vw;
+}
+label {
+  position: relative;
+  padding-right: 20px;
+  font-size: large;
+}
+select {
+  position: relative;
+  padding-right: 20px;
+  font-size: medium;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+button {
+  position: relative;
+  padding-right: 20px;
+  font-size: medium;
+
+  border: 1px solid grey;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/*corpo principal:*/
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  line-height: 30px;
+}
+
+section {
+  border-left: 1px dashed rgb(238, 228, 228);
+  min-height: 200px;
+  max-height: 1000px;
+  width: 30vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  text-align: left;
+  justify-content: space-around;
+}
