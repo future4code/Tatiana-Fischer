@@ -80,6 +80,7 @@ const App = () => {
           onChange={onChangeInput}
           id={"dia"}
           required
+          placeholder="dia"
         >
           <option value="">Escolha um dia da semana!</option>
           <option value="Segunda">Segunda</option>
