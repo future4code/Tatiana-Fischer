@@ -58,6 +58,11 @@ describe("Renderização inicial", () => {
     const { getByText } = render(<App />);
 
     expect(getByText(/Criar Tarefa/)).toBeInTheDocument();
+
+    ////verificar se o select com os dias renderiza
+    test("Select com dias existe na tela", () => {
+      const { getByPlaceholderText } = render(<App />);
+    });
   });
 });
 
