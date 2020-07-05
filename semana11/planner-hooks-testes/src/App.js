@@ -24,10 +24,6 @@ const App = () => {
 
   //////////////Pegar tarefas da API:
   useEffect(() => {
-    mostrarTarefas();
-  }, []);
-
-  const mostrarTarefas = () => {
     Axios.get(`${baseUrl}`)
       .then((response) => {
         setTarefas(response.data);
@@ -36,7 +32,8 @@ const App = () => {
       .catch((error) => {
         console.log(error);
       });
-  };
+  }, []);
+
   //////////////criar nova tarefa
   const criarTarefa = (event) => {
     event.preventDefault();
@@ -45,16 +42,20 @@ const App = () => {
       day: form.dia,
     };
 
-    Axios.post(`${baseUrl}`, body).then(() => {
-      // setTarefas(response.data);
-      mostrarTarefas();
-      setForm({
-        inputTarefas: "",
-        dia: "",
-      }).catch((error) => {
+    Axios.post(`${baseUrl}`, body)
+      .then(() => {
+        console.log("ok");
+      })
+
+      .catch((error) => {
         console.log(error);
       });
+
+    setForm({
+      inputTarefas: "",
+      dia: "",
     });
+    setTarefas([...tarefas, body]);
   };
 
   //////////////riscar e selecionar tarefa ---> NÃO FIZ AINDA!!!
@@ -73,7 +74,9 @@ const App = () => {
           required
           title="No mínimo 3 e no máximo 30 carctéres."
         />
-        <label>Dia:</label>
+        <label data-testid={"label-dia"} htmlFor="dia">
+          Dia:
+        </label>
         <select
           name="dia"
           value={form.dia}
@@ -84,7 +87,7 @@ const App = () => {
         >
           <option value="">Escolha um dia da semana!</option>
           <option value="Segunda">Segunda</option>
-          <option value="Terça">Terça</option>
+          <option value="Terça">terça</option>
           <option value="Quarta">Quarta</option>
           <option value="Quinta">Quinta</option>
           <option value="Sexta">Sexta</option>
