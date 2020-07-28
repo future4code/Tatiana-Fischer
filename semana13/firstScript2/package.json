@@ -1,0 +1,23 @@
+{
+  "name": "meuprojetonode",
+  "version": "1.0.0",
+  "description": "Primeira aula de Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "get-all-users": "tsc && node build/index.js",
+    "delete-user": "tsc && node build/deleteUser.js",
+    "test": "node build/index.js"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "typescript",
+    "package.json"
+  ],
+  "author": "Mateus",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.0.26",
+    "typescript": "^3.9.7"
+  }
+}
