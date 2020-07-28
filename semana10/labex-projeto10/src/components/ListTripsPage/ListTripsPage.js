@@ -8,22 +8,17 @@ const ListTripsContainer = styled.ol`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 100px auto;
   width: 900px;
   height: auto;
   min-height: 600px;
-
   background-color: #141717;
-
   opacity: 0.8;
   border-radius: 8px;
   border: 0.5px solid #dee5e5;
   color: #dee5e5;
   font-size: 24px;
-
   margin-bottom: 200px;
-
   :hover {
     opacity: 0.9;
   }
