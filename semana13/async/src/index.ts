@@ -15,14 +15,7 @@ const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labenews";
 // async function getUsers(): Promise<any[]> {
 //   const users = await axios.get(`${baseUrl}/subscribers/all`);
 
-//   return users.data.map((res: any) => {
-//     return {
-//       id: res.id,
-//       name: res.name,
-//       email: res.email,
-//     };
-//   });
-// }
+//  return users.data;
 
 // getUsers().then((res) => {
 //   console.log(res);
@@ -38,25 +31,52 @@ const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labenews";
 // variável uma arrow function do tipo qualquer.
 //b. Implemente a função solicitada, usando arrow function:
 
-const getUsers = async (): Promise<any> => {
-  const users = await axios.get(`${baseUrl}/subscribers/all`);
+// const getUsers = async (): Promise<any> => {
+//   const users = await axios.get(`${baseUrl}/subscribers/all`);
 
-  return users.data.map((res: any) => {
-    return {
-      id: res.id,
-      name: res.name,
-      email: res.email,
-    };
-  });
-};
+//   return users.data;
+// };
 
-getUsers().then((res) => {
-  console.log(res);
-});
+// getUsers().then((res) => {
+//   console.log(res);
+// });
 
-// const main: () => Promise<any> = async (): Promise<any> => {
+//------------------------------------------------------------------------------
 
-//     try {
-//         const users = await axios.get(`${baseUrls}`)
-//     }
+// Exercício 3
+// Agora, vamos melhorar um pouco a nossa função, criando uma tipagem que
+// represente os assinantes da nossa aplicação. No nosso caso, eles possuem um id,
+// name e email, como indicado abaixo:
+// type User = {
+// 	id: string;
+// 	name: string;
+// 	email: string;
 // }
+
+// a. Se apenas trocarmos o retorno da função para: Promise<User[]> ,
+// teremos algum erro de tipagem?
+///Acredito que da certo fazendo essa troca.
+
+// b. Na aula, comentamos que sempre fazemos um mapeamento do resultado de
+// uma Promise, caso seja inidicado que ela retorne um Promise<any>. Explique com
+// as suas palavras o porquê de fazermos isso:
+////// O mapeamente serve para podermos organizar os dados da nossa maneira, sendo possível
+////// renomeá-los e e modelarmos como o array será retornado.
+
+// c. Reimplemente a função, corretamente.
+
+// const getUsers = async (): Promise<any> => {
+//   const users = await axios.get(`${baseUrl}/subscribers/all`);
+
+//   return users.data.map((res: any) => {
+//     return {
+//       id: res.id,
+//       name: res.name,
+//       email: res.email,
+//     };
+//   });
+// };
+
+// getUsers().then((res) => {
+//   console.log(res);
+// });
