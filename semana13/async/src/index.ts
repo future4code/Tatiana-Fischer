@@ -65,18 +65,45 @@ const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labenews";
 
 // c. Reimplemente a função, corretamente.
 
-// const getUsers = async (): Promise<any> => {
-//   const users = await axios.get(`${baseUrl}/subscribers/all`);
+const getUsers = async (): Promise<any> => {
+  const users = await axios.get(`${baseUrl}/subscribers/all`);
 
-//   return users.data.map((res: any) => {
-//     return {
-//       id: res.id,
-//       name: res.name,
-//       email: res.email,
-//     };
-//   });
-// };
+  return users.data.map((res: any) => {
+    return {
+      id: res.id,
+      name: res.name,
+      email: res.email,
+    };
+  });
+};
 
-// getUsers().then((res) => {
-//   console.log(res);
-// });
+getUsers().then((res) => {
+  console.log(res);
+});
+
+//---------------------------------------------------------------------------
+
+// Exercício 4
+// Vamos continuar as nossas funcionalidades da API. Crie uma função que
+// permita criar uma nova notícia.
+// a. Qual é o tipo dessa função? Por quê?
+////FUnção do tipo assíncrona, pois vai retornar uma promessa.
+// b. Implemente a função solicitada
+
+async function createNew(
+  title: string,
+  content: string,
+  date: string
+): Promise<void> {
+  try {
+    await axios.put(`${baseUrl}/news`, {
+      title,
+      content,
+      date: Date.now(),
+    });
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+createNew("NOVIDADE", "super novidade!", "30/07/2020");
