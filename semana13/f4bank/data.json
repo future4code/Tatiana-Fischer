@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "nome": "Tatiana",
+    "cpf": "111.111.111-11",
+    "dataNascimento": "11/10/1991",
+    "saldo": 10,
+    "extratoUsuario": [
+      {
+        "valor": 10,
+        "data": "09/07/2020",
+        "descricao": "kkkk"
+      }
+    ]
+  }
+]
