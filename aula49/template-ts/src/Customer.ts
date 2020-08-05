@@ -19,4 +19,9 @@ export class Customer extends User {
   public getCreditCard(): string {
     return this.creditCard;
   }
+
+  interoduceYourself(): string {
+    const interoduce = super.interoduceYourself();
+    return interoduce;
+  }
 }

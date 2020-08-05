@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node ./src/index.ts",
-    "build": "tsc && node ./build/index.js"
+    "build": "tsc && node ./build/index.js",
+    "user": "ts-node ./src/User.ts",
+    "customer": "ts-node ./src/Customer.ts"
   },
   "author": "",
   "license": "ISC",

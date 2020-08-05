@@ -20,7 +20,7 @@ console.log(newUser);
 //a. Seria possível imprimir a senha (password) atrelada a essa instância? Sim
 //a. Seria possível imprimir a senha (password) atrelada a essa instância? 1
 
-//   Analise a Customer. Perceba quais propriedades são públicas e quais são
+//   2.Analise a Customer. Perceba quais propriedades são públicas e quais são
 //   privadas. Copie esse código para o seu exercício de hoje e crie uma instância
 //   dessa classe (com as informações que você quiser). Atente-se ao fato de que o
 //   Customer é uma subclasse (ou classe filha) da classe User. Sabemos disso
@@ -38,9 +38,9 @@ const newCustomer = new Customer(
 );
 console.log(newCustomer);
 
-// Agora, imprima todas as informações possíveis da instância que você criou:
+// 3.Agora, imprima todas as informações possíveis da instância que você criou:
 // o id, o nome, o email, o valor total de compra (purchaseTotal) e o cartão de
 // crédito (creditCard). Perceba que as propriedades públicas da classe pai (User)
 // foram "herdadas" pela classe filha (Customer).
 //a. Seria possível imprimir a senha (password) atrelada a essa instância?
-//Por quê? sim
+//Por quê? sim, mas não entendi o porquê, já que ele é privado

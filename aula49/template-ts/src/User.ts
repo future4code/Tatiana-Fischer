@@ -23,4 +23,9 @@ export class User {
   public getName(): string {
     return this.name;
   }
+
+  //método
+  public interoduceYourself(): string {
+    return `Olá, sou ${this.name}. bom dia!`;
+  }
 }
