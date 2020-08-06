@@ -1,11 +1,16 @@
-type person = {
-  name: string
-}
+import { Client } from "./Client";
 
-function createPerson(name: string): person {
-	return {name: name} 
-} 
+const client: Client = {
+  name: "Tati",
+  registrationNumber: 1,
+  consumedEnergy: 30,
 
-const myPerson2 = createPerson("Robson");
+  calculateBill: () => {
+    return 2;
+  },
+};
 
-console.log(myPerson2);
+console.log(client);
+
+//exercício 1
+//a. name, registrationNumber, consumeEnergy
