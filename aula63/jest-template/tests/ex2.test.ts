@@ -1,4 +1,6 @@
-test("Testing balance greater than value", () => {
+import { makePurchase, User } from "../src/ex1";
+
+test("Testing balance greater than purchase value", () => {
   const user: User = {
     name: "Tati",
     balance: 100,
@@ -12,7 +14,7 @@ test("Testing balance greater than value", () => {
   });
 });
 
-test("Testing balance greater than value", () => {
+test("Testing balance = purchase value", () => {
   const user: User = {
     name: "Tati",
     balance: 50,
@@ -26,7 +28,7 @@ test("Testing balance greater than value", () => {
   });
 });
 
-test("Testing balance greater than value", () => {
+test("Testing balance less than purchase value", () => {
   const user: User = {
     name: "Tati",
     balance: 30,
