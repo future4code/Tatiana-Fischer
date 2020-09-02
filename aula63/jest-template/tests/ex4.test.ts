@@ -38,41 +38,60 @@ test("Usuário americano >= 18 anos, estabelecimento Brasil", () => {
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-test("Um usuário brasileiro, dois americanos = 19 anos, estabelecimento EUA", () => {
-  const brazilianUser: User[] = [
-    {
-      age: 19,
-      nacionality: NACIONALITY.BRAZILIAN,
-      name: "lala",
-    },
-  ];
-
-  const americanUser: User[] = [
-    {
-      age: 19,
-      nacionality: NACIONALITY.AMERICAN,
-      name: "lulu",
-    },
-    {
-      age: 19,
-      nacionality: NACIONALITY.AMERICAN,
-      name: "lele",
-    },
-  ];
-
-  const americanCasino: Casino = {
-    location: LOCATION.EUA,
-    name: "EUA Casino",
+test("Dois usuários brasileiros, dois americanos = 19 anos, estabelecimento EUA", () => {
+  const brazilianUser: User = {
+    name: "BR",
+    age: 19,
+    nacionality: NACIONALITY.BRAZILIAN,
   };
 
-  const result = verifyAge(americanCasino, brazilianUser);
+  const americanUser: User = {
+    name: "EUA",
+    age: 19,
+    nacionality: NACIONALITY.AMERICAN,
+  };
 
-  expect(result.brazilians.unallowedEntry).toEqual(["lala"]);
-  expect(result.americans.unallowedEntry).toEqual(["lulu", "lele"]);
+  const casinoEUA: Casino = {
+    name: "Casino EUA",
+    location: LOCATION.EUA,
+  };
+
+  const result = verifyAge(casinoEUA, [
+    brazilianUser,
+    brazilianUser,
+    americanUser,
+    americanUser,
+  ]);
+  expect(result.brazilians.unallowedEntry).toEqual(["BR", "BR"]);
+  expect(result.americans.unallowedEntry).toEqual(["EUA", "EUA"]);
 });
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
-// test ("Dois usuários brasileiros, = 19 anos. Dois americanos = 21 anos, estabelecimento EUA", () => {
+test("Dois usuários brasileiros, = 19 anos. Dois americanos = 21 anos, estabelecimento EUA", () => {
+  const brazilianUser: User = {
+    name: "BR",
+    age: 19,
+    nacionality: NACIONALITY.BRAZILIAN,
+  };
 
-//})
+  const americanUser: User = {
+    name: "EUA",
+    age: 21,
+    nacionality: NACIONALITY.AMERICAN,
+  };
+
+  const casinoEUA: Casino = {
+    name: "Casino EUA",
+    location: LOCATION.EUA,
+  };
+
+  const result = verifyAge(casinoEUA, [
+    brazilianUser,
+    brazilianUser,
+    americanUser,
+    americanUser,
+  ]);
+  expect(result.americans.allowedEntry).toEqual(["EUA", "EUA"]);
+  expect(result.brazilians.unallowedEntry).toEqual(["BR", "BR"]);
+});
