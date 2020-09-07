@@ -8,7 +8,8 @@ export class BandDatabase extends BaseDatabase {
     id: string,
     musicalGenre: string,
     name: string,
-    responsible: string
+    responsible: string,
+    userId: string
   ): Promise<void> {
     try {
       await this.getConnection()
@@ -17,6 +18,7 @@ export class BandDatabase extends BaseDatabase {
           musicalGenre,
           name,
           responsible,
+          userId,
         })
         .into(BandDatabase.TABLE_NAME);
     } catch (error) {

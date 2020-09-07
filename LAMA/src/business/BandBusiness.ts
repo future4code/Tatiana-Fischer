@@ -1,35 +1,25 @@
-// import { BandInputDTO } from "../model/Band";
+import { CreateBandInputDTO, GetBandInputDTO, Band } from "../model/Band";
+import { BandDatabase } from "../data/BandDatabase";
+import { IdGenerator } from "../services/IdGenerator";
 
-// import { BandDatabase } from "../data/BandDatabase";
-// import { IdGenerator } from "../services/IdGenerator";
-// import { HashManager } from "../services/HashManager";
-// import { Authenticator } from "../services/Authenticator";
+export class BandBusiness {
+  public async createBand(band: CreateBandInputDTO) {
+    const idGenerator = new IdGenerator();
+    const id = idGenerator.generate();
 
-// export class BandBusiness {
-//   async createBand(band: BandInputDTO) {
-//     const idGenerator = new IdGenerator();
-//     const id = idGenerator.generate();
+    const bandDatabase = new BandDatabase();
 
-//     // const hashManager = new HashManager();
-//     // const hashPassword = await hashManager.hash(band.);
+    await bandDatabase.createBand(
+      id,
+      band.musicalGenre,
+      band.name,
+      band.responsible,
+      band.userId
+    );
+  }
 
-//     const bandDatabase = new BandDatabase();
-//     await bandDatabase.createBand(
-//       id,
-//      band.musicalGenre,
-//      band.name,
-//      band.responsible
-//     );
-
-//     const authenticator = new Authenticator();
-
-//     return ;
-//   }
-
-//   async getUserByName(band: BandInputDTO) {
-//     const bandDatabase = new BandDatabase();
-//     const bandFromDB = await bandDatabase.getBandByName(band.name);
-
-//     });
-
-// }
+  public async getUserByName(band: GetBandInputDTO): Promise<Band> {
+    const bandDatabase = new BandDatabase();
+    return await bandDatabase.getBandByName(band.name);
+  }
+}
