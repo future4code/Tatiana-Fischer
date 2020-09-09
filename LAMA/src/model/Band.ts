@@ -72,8 +72,6 @@ export class CreateBandInputDTO {
     this.userId = userId;
   }
 }
-export interface GetBandInputDTO {
-  musicalGenre: string;
-  responsible: string;
+export interface GetBandByNameInputDTO {
   name: string;
 }

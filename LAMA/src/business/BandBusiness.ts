@@ -1,4 +1,4 @@
-import { CreateBandInputDTO, GetBandInputDTO, Band } from "../model/Band";
+import { CreateBandInputDTO, GetBandByNameInputDTO, Band } from "../model/Band";
 import { BandDatabase } from "../data/BandDatabase";
 import { IdGenerator } from "../services/IdGenerator";
 
@@ -18,7 +18,7 @@ export class BandBusiness {
     );
   }
 
-  public async getUserByName(band: GetBandInputDTO): Promise<Band> {
+  public async getBandByName(band: GetBandByNameInputDTO): Promise<Band> {
     const bandDatabase = new BandDatabase();
     return await bandDatabase.getBandByName(band.name);
   }
