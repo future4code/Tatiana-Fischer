@@ -27,11 +27,15 @@ export class BandDatabase extends BaseDatabase {
   }
 
   public async getBandByName(name: string): Promise<Band> {
-    const result = await this.getConnection()
-      .select("*")
-      .from(BandDatabase.TABLE_NAME)
-      .where({ name });
+    try {
+      const result = await this.getConnection()
+        .select("*")
+        .from(BandDatabase.TABLE_NAME)
+        .where({ name });
 
-    return Band.toBandModel(result[0]);
+      return Band.toBandModel(result[0]);
+    } catch (err) {
+      throw new Error(err.message);
+    }
   }
 }
