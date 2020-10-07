@@ -27,3 +27,22 @@ Ferramentas e linguagens:
 - O objetivo desse challenge é te fazer pensar como um método que a gente usa bastante com strings: .indexOf. Escreva uma função que simule o seu comportamento (sem utilizar esse método na sua implementação), que receba uma string source e um caracter que se deseja encontrar nela query e devolva o index em que esse caracter aparece pela primeira vez
 
 - Definição de <b>indexOf</b>: "O método indexOf() retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente."
+
+## Exercício 3 - Checa parênteses válidos:
+
+Escreva uma função que recebe uma string que pode conter somente os seguintes caracteres: '(', ')', '[', ']', '{', '}' , e retorna true para uma string válida, e false para uma inválida.
+
+- Uma string é válida se:
+
+1. Parênteses (ou chaves, ou colchetes) abertos devem ser fechados pelo mesmo tipo de parênteses (ou chaves, ou colchetes).
+2. Parênteses (ou chaves, ou colchetes) abertos devem ser fechados na mesma ordem que foram abertos.
+   Obs. Uma string vazia é considerada **válida**.
+
+- Exemplos:
+  Input: "()"/Output: true
+  Input: "()[]{}"/Output: true
+  Input: "(]"/Output: false
+  Input: "([)]"/Output: false
+  Input: "{[]}"/Output: true
+
+  obs.: "O método pop() remove o último elemento de um array e retorna aquele elemento".
