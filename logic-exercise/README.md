@@ -46,3 +46,14 @@ Escreva uma função que recebe uma string que pode conter somente os seguintes 
   Input: "{[]}"/Output: true
 
   obs.: "O método pop() remove o último elemento de um array e retorna aquele elemento".
+
+## Exercício 4 - Maior prefixo comum:
+
+Escreva uma função que receba um array de strings e retorne o maior prefixo comum entre todas as strings.
+O prefixo é definido pelo começo até uma posição qualquer de uma string. Por exemplo, na string "arvore", "a" seria um prefixo, e "arvor" também.
+Caso não exista um prefixo comum, retorne uma string vazia ("")
+Seguem exemplos para melhor entendimento:
+
+Input: ["flower","flow","flight"]/Output: "fl"
+Input: ["dog","racecar","car"]/Output: ""
+Input: ["coracao","cor","corona","coreia"]/Output: "cor"
